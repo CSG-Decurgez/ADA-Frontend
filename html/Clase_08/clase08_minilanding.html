@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Landing • Clase 08</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/clase08.css">
+</head>
+
+<body>
+
+  <header class="hero">
+    <h1>Bienvenidas a la Mini Landing Clase 08</h1>
+  </header>
+
+  <section class="intro">
+    <p>
+      Este es un ejemplo de landing responsiva. Aquí mostramos cómo una estructura simple
+      puede adaptarse a distintos tamaños de pantalla usando unidades relativas y media queries.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo vel nunc
+      tincidunt aliquet. Integer non dui vel ipsum placerat facilisis. Suspendisse potenti.
+      Curabitur ac orci non urna fermentum tincidunt.
+    </p>
+  </section>
+
+  <section class="gallery">
+    <img src="../../images/clase_08_a.jpg" alt="">
+    <img src="../../images/clase_08_b.jpg" alt="">
+  </section>
+
+  <footer>© 2026</footer>
+
+  <!-- ========================= -->
+  <!-- Código HTML mostrado como texto -->
+  <!-- ========================= -->
+   <section class="codigo">
+  <h2>Código HTML</h2>
+  <pre><code>&lt;header class="hero"&gt;
+  &lt;h1&gt;Bienvenidas&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;section class="intro"&gt;
+  &lt;p&gt;
+    Este es un ejemplo de landing responsiva. Aquí mostramos cómo una estructura simple
+    puede adaptarse a distintos tamaños de pantalla usando unidades relativas y media queries.
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo vel nunc
+    tincidunt aliquet. Integer non dui vel ipsum placerat facilisis. Suspendisse potenti.
+    Curabitur ac orci non urna fermentum tincidunt.
+  &lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section class="gallery"&gt;
+  &lt;img src="../../images/clase_08_a.jpg" alt=""&gt;
+  &lt;img src="../../images/clase_08_b.jpg" alt=""&gt;
+&lt;/section&gt;
+
+&lt;footer&gt;© 2026&lt;/footer&gt;
+</code></pre>
+
+  <!-- ========================= -->
+  <!-- Código CSS mostrado como texto -->
+  <!-- ========================= -->
+  <h2>Código CSS</h2>
+  <pre><code>/* clase08.css */
+
+.hero {
+  height: 70vh;
+  background: url('background.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.intro {
+  padding: 2rem 1.5rem;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #CD0055;
+  color: white;
+  margin-top: 2rem;
+}
+</code></pre>
+<a href="clase08_guia_practica.html">Cerrar y volver a la guía práctica.</a>
+</section>
+
+</body>
+</html>

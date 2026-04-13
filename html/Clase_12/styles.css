@@ -1,0 +1,111 @@
+/* ==========================================================
+   ACTIVIDAD: SELECTORES AVANZADOS Y PSEUDO-CLASES
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   Paso 2: aplicar selectores avanzados
+   ---------------------------------------------------------- */
+
+/* 1. Selectores de atributos:
+
+a - Estiliza todos los enlaces que contengan # en su atributo href */
+
+a[] {
+    /* escribe el estilo */
+}
+
+/* b - Cambia el color de los input que tengan un atributo type="email": */
+input[] {
+    /* escribe el estilo */
+}
+
+
+/* 2. Selector hermano adyacente y hermanos:
+
+c - Cambia el estilo del párrafo que sigue inmediatamente después de un h2: */
+
+h2 {
+  /* escribe el estilo */
+}
+
+/* d - Cambia el color de todos los li hermanos dentro de la lista */
+
+li {
+    /* escribe el estilo */
+}
+
+
+/* 3. Selector descendiente y directo:
+
+e - Estiliza todos los p dentro de section */
+
+section {
+    /* escribe el estilo */
+}
+
+/* f - Cambia el estilo sólo de los hijos directos de ul */
+
+ul {
+    /* escribe el estilo */
+}
+
+/* 4. Selector universal:
+
+g - Aplica un margen cero a todos los elementos: */
+
+/* escribe el estilo */
+
+
+/* ----------------------------------------------------------
+   Paso 3: aplicar pseudo-clases
+   ---------------------------------------------------------- */
+
+/* 5. Estiliza elementos con pseudo-clases dinámicas:
+
+h. Cambia el color del botón al pasar el mouse encima: */
+
+button {
+    /* escribe el estilo */
+}
+
+/* i. Estiliza el enlace activo del menú */
+
+a {
+    /* escribe el estilo */
+}
+
+/* 6. Estiliza con pseudo-clases estructurales:
+
+j. Cambia el estilo del segundo elemento de la lista */
+
+li {
+    /* escribe el estilo */
+}
+
+/* k. Cambia el fondo del último párrafo del main */
+
+main {
+    /* escribe el estilo */
+}
+
+/* 7. Pseudo-clases de validación y estado:
+
+l. Cambia el borde de los campos de formulario válidos */
+
+input {
+  /* escribe el estilo */
+}
+
+/* m. Cambia el borde de los campos inválidos */
+
+input {
+  /* escribe el estilo */
+}
+
+/* 8. Estiliza el placeholder:
+n. Cambia el color del texto del placeholder mientras es visible */
+
+input {
+    /* escribe el estilo */
+}

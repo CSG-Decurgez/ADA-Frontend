@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase 07 • Guía práctica Flexbox</title>
+
+  <!-- Tipografías Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/clase07.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>Clase 07 • Flexbox</h1>
+    <p>Guía práctica para experimentar con contenedores flexibles y sus propiedades.</p>
+  </header>
+
+  <!-- Navegación -->
+  <section class="navegacion">
+    <a class="volver" href="../../index.html">← Volver al índice</a>
+    <a class="volver" href="clase07_ejercicios.html">Ir a ejercicios de la clase 07 →</a>
+  </section>
+
+  <main>
+
+    <!-- ========================= -->
+    <!-- 1. Activar Flexbox        -->
+    <!-- ========================= -->
+    <section>
+      <h2>1. Activar Flexbox en un contenedor</h2>
+      <p><strong>Objetivo:</strong> convertir un contenedor normal en un contenedor flexible.</p>
+
+      <div class="demo-container">
+        <div class="demo-box">1</div>
+        <div class="demo-box">2</div>
+        <div class="demo-box">3</div>
+      </div>
+
+      <pre><code>/* clase07.css */
+.demo-container {
+  border: 2px solid #ccc;
+  padding: 1rem;
+  /* Ejercicio: activá Flexbox */
+  /* display: flex; */
+}</code></pre>
+
+      <h3 id="ejercicio-1">Ejercicio 1 • Activar Flexbox</h3>
+      <ul>
+        <li>Descomentá <code>display: flex;</code> en <code>.demo-container</code>.</li>
+        <li>Observá cómo los ítems pasan a estar en fila.</li>
+      </ul>
+    </section>
+
+    <!-- ========================= -->
+    <!-- 2. flex-direction         -->
+    <!-- ========================= -->
+    <section>
+      <h2>2. flex-direction</h2>
+      <p><strong>Objetivo:</strong> cambiar la dirección del eje principal.</p>
+
+      <div class="demo-container demo-direction">
+        <div class="demo-box">A</div>
+        <div class="demo-box">B</div>
+        <div class="demo-box">C</div>
+        <div class="demo-box">D</div>
+      </div>
+
+      <pre><code>/* clase07.css */
+.demo-direction {
+  display: flex;
+  /* Probá distintas direcciones */
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+}</code></pre>
+
+      <h3 id="ejercicio-2">Ejercicio 2 • Direcciones</h3>
+      <ul>
+        <li>Probá cada valor de <code>flex-direction</code>.</li>
+        <li>Relacioná lo que ves con las diapositivas de la clase.</li>
+      </ul>
+    </section>
+
+    <!-- ========================= -->
+    <!-- 3. flex-wrap              -->
+    <!-- ========================= -->
+    <section>
+      <h2>3. flex-wrap</h2>
+      <p><strong>Objetivo:</strong> permitir que los ítems pasen a otra línea.</p>
+
+      <div class="demo-container demo-wrap">
+        <div class="demo-box">1</div>
+        <div class="demo-box">2</div>
+        <div class="demo-box">3</div>
+        <div class="demo-box">4</div>
+        <div class="demo-box">5</div>
+        <div class="demo-box">6</div>
+      </div>
+
+      <pre><code>/* clase07.css */
+.demo-wrap {
+  display: flex;
+  gap: 0.5rem;
+  /* Probá: nowrap, wrap, wrap-reverse */
+  /* flex-wrap: nowrap; */
+}</code></pre>
+
+      <h3 id="ejercicio-3">Ejercicio 3 • Wrap</h3>
+      <ul>
+        <li>Asigná un ancho fijo a las cajas en el CSS.</li>
+        <li>Probá <code>flex-wrap: nowrap</code>, <code>wrap</code> y <code>wrap-reverse</code>.</li>
+        <li>Reducí el ancho de la ventana y observá el comportamiento.</li>
+      </ul>
+    </section>
+
+    <!-- ========================= -->
+    <!-- 4. justify-content        -->
+    <!-- ========================= -->
+    <section>
+      <h2>4. justify-content</h2>
+      <p><strong>Objetivo:</strong> distribuir los ítems en el eje principal.</p>
+
+      <div class="demo-container demo-justify">
+        <div class="demo-box">1</div>
+        <div class="demo-box">2</div>
+        <div class="demo-box">3</div>
+      </div>
+
+      <pre><code>/* clase07.css */
+.demo-justify {
+  display: flex;
+  /* Probá: flex-start, flex-end, center, space-between, space-around, space-evenly */
+  /* justify-content: center; */
+}</code></pre>
+
+      <h3 id="ejercicio-4">Ejercicio 4 • Distribución en el eje principal</h3>
+      <ul>
+        <li>Probá todos los valores de <code>justify-content</code>.</li>
+        <li>Identificá cuál coincide con cada ejemplo del PPT.</li>
+      </ul>
+    </section>
+
+    <!-- ========================= -->
+    <!-- 5. align-items / content  -->
+    <!-- ========================= -->
+    <section>
+      <h2>5. align-items y align-content</h2>
+      <p><strong>Objetivo:</strong> alinear ítems en el eje perpendicular y entre líneas.</p>
+
+      <div class="demo-container demo-align">
+        <div class="demo-box alto">1</div>
+        <div class="demo-box">2</div>
+        <div class="demo-box alto">3</div>
+      </div>
+
+      <pre><code>/* clase07.css */
+.demo-align {
+  display: flex;
+  height: 200px;
+  /* Probá: flex-start, flex-end, center, stretch, baseline */
+  /* align-items: stretch; */
+}</code></pre>
+
+      <h3 id="ejercicio-5">Ejercicio 5 • Alineación perpendicular</h3>
+      <ul>
+        <li>Probá distintos valores de <code>align-items</code>.</li>
+        <li>Jugá con alturas diferentes en las cajas.</li>
+      </ul>
+
+      <h3 id="ejercicio-6">Ejercicio 6 • align-content</h3>
+      <p>Duplicá las cajas, activá <code>flex-wrap</code> y probá <code>align-content</code> con varios valores.</p>
+    </section>
+
+    <!-- ========================= -->
+    <!-- 6. order                  -->
+    <!-- ========================= -->
+    <section>
+      <h2>6. order</h2>
+      <p><strong>Objetivo:</strong> cambiar el orden visual sin tocar el HTML.</p>
+
+      <div class="demo-container demo-order">
+        <div class="demo-box box-a">A</div>
+        <div class="demo-box box-b">B</div>
+        <div class="demo-box box-c">C</div>
+      </div>
+
+      <pre><code>/* clase07.css */
+.demo-order {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.box-a { /* order: 0; */ }
+.box-b { /* order: 0; */ }
+.box-c { /* order: 0; */ }</code></pre>
+
+      <h3 id="ejercicio-7">Ejercicio 7 • Reordenar ítems</h3>
+      <ul>
+        <li>Asigná distintos valores de <code>order</code> a cada caja.</li>
+        <li>Reproducí ejemplos del PPT.</li>
+      </ul>
+    </section>
+
+    <!-- ========================= -->
+    <!-- 7. flex-basis / grow / shrink -->
+    <!-- ========================= -->
+    <section>
+      <h2>7. flex-basis, flex-grow y flex-shrink</h2>
+      <p><strong>Objetivo:</strong> controlar tamaño inicial, crecimiento y reducción.</p>
+
+      <div class="demo-container demo-flex">
+        <div class="demo-box flex-uno">1</div>
+        <div class="demo-box flex-dos">2</div>
+        <div class="demo-box flex-tres">3</div>
+      </div>
+
+      <pre><code>/* clase07.css */
+.demo-flex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.flex-uno {
+  /* flex-basis: 100px; */
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+}
+
+.flex-dos {
+  /* flex-basis: 100px; */
+  /* flex-grow: 2; */
+  /* flex-shrink: 1; */
+}
+
+.flex-tres {
+  /* flex-basis: 100px; */
+  /* flex-grow: 1; */
+  /* flex-shrink: 2; */
+}</code></pre>
+
+      <h3 id="ejercicio-8">Ejercicio 8 • Tamaños flexibles</h3>
+      <ul>
+        <li>Probá distintos valores de <code>flex-basis</code>, <code>flex-grow</code> y <code>flex-shrink</code>.</li>
+        <li>Reducí y ampliá el ancho de la ventana para ver cómo se adaptan.</li>
+      </ul>
+    </section>
+
+    <!-- ========================= -->
+    <!-- 8. Recursos               -->
+    <!-- ========================= -->
+    <section>
+      <h2>8. Recursos de la clase</h2>
+      <ul>
+        <li><a href="clase07_ejercicios.html">Índice de ejercicios y recursos de Flexbox</a></li>
+      </ul>
+    </section>
+
+    <!-- ========================= -->
+    <!-- 9. SVG (nuevo)            -->
+    <!-- ========================= -->
+    <section>
+      <h2>9. Introducción a SVG</h2>
+      <p><strong>Objetivo:</strong> comprender qué es un SVG y cómo insertarlo en HTML.</p>
+
+      <p>SVG es un formato vectorial que permite crear gráficos que no pierden calidad al escalarse. Se puede usar para íconos, formas, ilustraciones y más.</p>
+
+      <h3>Ejemplo básico de SVG inline</h3>
+
+      <pre><code>&lt;svg width="120" height="120" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;circle cx="60" cy="60" r="50" fill="#CD0055" /&gt;
+&lt;/svg&gt;</code></pre>
+
+      <p>Resultado:</p>
+
+      <svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="50" fill="#CD0055" />
+      </svg>
+
+      <h3>Ejercicio 9 • Crear tu propio SVG</h3>
+      <ul>
+        <li>Creá un archivo HTML nuevo o usá este mismo.</li>
+        <li>Insertá un SVG inline con un rectángulo, círculo o polígono.</li>
+        <li>Cambiá colores, tamaños y posiciones.</li>
+      </ul>
+    </section>
+
+  </main>
+</body>
+</html>

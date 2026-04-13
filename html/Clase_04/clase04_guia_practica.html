@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase 04 - Práctica de CSS</title>
+
+  <!-- ========================= -->
+  <!-- 2) CSS en el documento (style) -->
+  <!-- ========================= -->
+  <style>
+    /* Ejemplo básico: selector por tipo */
+    p {
+      color: darkblue;
+    }
+
+    /* Selector por clase */
+    .destacado {
+      color: crimson;
+    }
+
+    /* Selector por ID */
+    #importante {
+      color: green;
+    }
+
+    /* Selector descendiente */
+    section p {
+      color: purple;
+    }
+  </style>
+
+  <!-- ========================= -->
+  <!-- 3) CSS externo (link) -->
+  <!-- ========================= -->
+  
+  <link rel="stylesheet" href="../../css/clase04.css">
+  
+</head>
+
+<body>
+
+  <h1>Clase 04 – Introducción a CSS</h1>
+
+  <!-- ========================= -->
+  <!-- 1) CSS inline -->
+  <!-- ========================= -->
+  <h2>1) CSS inline (atributo style)</h2>
+
+  <p style="color: red;">Este párrafo usa CSS inline (color rojo).</p>
+
+  <p style="color: orange; font-weight: bold;">
+    Este también usa inline, con dos propiedades.
+  </p>
+
+  <hr>
+
+  <!-- ========================= -->
+  <!-- 2) CSS en el documento -->
+  <!-- ========================= -->
+  <h2>2) CSS dentro del documento (etiqueta &lt;style&gt;)</h2>
+
+  <p>Este párrafo está afectado por el selector <code>p</code> del &lt;style&gt;.</p>
+
+  <p class="destacado">Este usa la clase <code>.destacado</code>.</p>
+
+  <p id="importante">Este usa el ID <code>#importante</code>.</p>
+
+  <hr>
+
+  <!-- ========================= -->
+  <!-- 3) CSS externo -->
+  <!-- ========================= -->
+  <h2>3) CSS externo (archivo .css)</h2>
+
+  <p>
+    Para activar el CSS externo, descomentá la etiqueta
+    <code>&lt;link&gt;</code> en el &lt;head&gt; y para leer al archivo
+    <strong>styles.css</strong>.
+  </p>
+
+  <!-- ========================= -->
+  <!-- 
+  El navegador carga el archivo styles.css y aplica todas las reglas que encuentre ahí.
+  Eso significa:
+  - los estilos del archivo externo se suman a los que ya existen
+  - si hay conflicto, gana el estilo más específico
+  - si hay empate, gana el estilo más cercano al elemento
+
+  ¿Qué pasa con los estilos inline?
+  Los estilos inline siguen funcionando porque son los más fuertes en la cascada.
+
+  ¿Qué pasa con los estilos dentro de <style>?
+    Los estilos dentro del <style> del documento siguen aplicándose, pero:
+    - si el archivo externo define algo más general, <style> lo pisa
+    - si <style> define algo más general, el archivo externo lo pisa
+    - depende del selector y del orden
+    -->
+    <!-- ========================= -->
+
+  <hr>
+
+  <!-- ========================= -->
+  <!-- 4) Selectores -->
+  <!-- ========================= -->
+  <h2>4) Selectores básicos</h2>
+
+  <section>
+    <h3>Sección de prueba</h3>
+    <p>Este párrafo está dentro de una sección (selector descendiente).</p>
+  </section>
+
+  <p>Este párrafo está fuera de la sección.</p>
+
+  <hr>
+
+  <!-- ========================= -->
+  <!-- 5) Colores -->
+  <!-- ========================= -->
+  <h2>5) Colores en CSS</h2>
+
+  <p style="color: blue;">Nombre de color: blue</p>
+  <p style="color: rgb(255, 0, 0);">RGB: rgb(255, 0, 0)</p>
+  <p style="color: #00aa00;">Hexadecimal: #00aa00</p>
+  <p style="color: hsl(200, 80%, 40%);">HSL: hsl(200, 80%, 40%)</p>
+
+  <hr>
+
+  <!-- ========================= -->
+  <!-- 6) Espacio para practicar -->
+  <!-- ========================= -->
+  <h2>6) Tu turno</h2>
+
+  <p><a href="practica_c4.html"></a>Práctica CSS Clase 4</p>
+
+</body>
+</html>

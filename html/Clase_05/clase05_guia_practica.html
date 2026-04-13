@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Guía Práctica • Clase 05</title>
+    <link rel="stylesheet" href="../../css/clase05.css">
+    <style>
+        /* Mini‑títulos visibles para cada bloque */
+        .diapo-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 4px;
+            font-style: italic;
+        }
+        hr {
+            margin: 40px 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Guía Práctica • Clase 05</h1>
+
+<hr>
+<div class="diapo-label">Diapositiva 3 • Tipografías en la web</div>
+<section>
+    <h2>Tipografías en la web</h2>
+    <p class="ejemplo-1">Este texto usa la familia definida en el CSS (Arial → sans-serif).</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 4 • Familias Tipográficas</div>
+<section>
+    <h2>Familias tipográficas</h2>
+    <p class="titulo-ejemplo">Este es un título con Times New Roman → serif.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 7 • Tamaño en píxeles</div>
+<section>
+    <h2>Tamaño en píxeles</h2>
+    <p class="px-16">Texto en 16px</p>
+    <p class="px-24">Texto en 24px</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 8 • Tamaño en porcentaje</div>
+<section>
+    <h2>Tamaño en porcentaje</h2>
+    <div class="porcentaje-base">
+        <p class="porcentaje-120">Este texto está al 120% del tamaño del padre.</p>
+    </div>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 9 • Tamaño en em</div>
+<section>
+    <h2>Tamaño en em</h2>
+    <div class="em-base">
+        <p class="em-1">Texto en 1em</p>
+        <p class="em-2">Texto en 2em</p>
+    </div>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 10 • Tamaño en puntos</div>
+<section>
+    <h2>Tamaño en puntos</h2>
+    <p class="pt-12">Texto en 12pt (pensado para impresión).</p>
+    <p class="pt-18">Texto en 18pt (más grande, también en puntos).</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 11 • Peso y estilo</div>
+<section>
+    <h2>Peso y estilo</h2>
+    <p class="fw-normal">Texto normal</p>
+    <p class="fw-bold">Texto bold</p>
+    <p class="italic">Texto en itálica</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 12 • Transformación de texto</div>
+<section>
+    <h2>Transformación de texto</h2>
+    <p class="upper">este texto pasa a mayúsculas</p>
+    <p class="lower">ESTE TEXTO PASA A MINÚSCULAS</p>
+    <p class="cap">este texto capitaliza cada palabra</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 13 • Alineado</div>
+<section>
+    <h2>Alineado de texto</h2>
+    <p class="left">Alineado a la izquierda</p>
+    <p class="center">Alineado al centro</p>
+    <p class="right">Alineado a la derecha</p>
+    <p class="justify">Este texto está justificado para ocupar todo el ancho del contenedor.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 14 • Decorado</div>
+<section>
+    <h2>Decorado</h2>
+    <p class="underline">Texto subrayado</p>
+    <p class="line-through">Texto tachado</p>
+    <p class="overline">Texto con línea superior</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 15 • Identación, espaciado y alto de línea</div>
+<section>
+    <h2>Identación y espaciado</h2>
+    <p class="indent">Este párrafo tiene identación en la primera línea.</p>
+    <p class="letter-space">Espaciado entre letras.</p>
+    <p class="word-space">Espaciado entre palabras.</p>
+    <p class="line-height">Este texto tiene un alto de línea mayor para mejorar la lectura.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 16 • Alineado vertical</div>
+<section>
+    <h2>Alineado vertical</h2>
+    <p class="vertical-demo">
+        Texto normal 
+        <img src="../../images/extraviada.jpg" alt="Imagen irrelevante" width="200"> class="v-middle"> 
+        imagen alineada al medio
+    </p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 17 • Sombra</div>
+<section>
+    <h2>Sombra de texto</h2>
+    <p class="shadow">Texto con sombra aplicada.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositivas 19–22 • Cascada</div>
+<section>
+    <h2>Cascada: origen, especificidad y orden</h2>
+    <p class="cascada-ejemplo">Este texto muestra qué regla gana según el CSS.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 23 • Herencia</div>
+<section class="herencia-base">
+    <h2>Herencia</h2>
+    <p class="heredado">Este texto hereda color y tipografía del contenedor.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 24 • Control de la herencia</div>
+<section>
+    <h2>Control de la herencia</h2>
+    <p class="inherit-demo">Este texto usa inherit.</p>
+    <p class="initial-demo">Este texto usa initial.</p>
+    <p class="unset-demo">Este texto usa unset.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 28 • Selectores CSS</div>
+<section>
+    <h2>Selectores CSS</h2>
+    <p>En los siguientes ejemplos vamos a seleccionar distintos elementos del HTML usando diferentes tipos de selectores.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 29 • ¿Qué es un selector?</div>
+<section>
+    <h2>¿Qué es un selector?</h2>
+    <p class="selector-ejemplo">Este párrafo será seleccionado por distintos tipos de selectores.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 30 • Especificación y soporte</div>
+<section>
+    <h2>Soporte de selectores</h2>
+    <p class="soporte">Este texto se usa para demostrar selectores ampliamente soportados.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 31 • Listas de selectores</div>
+<section>
+    <h2>Listas de selectores</h2>
+    <h3 class="lista-1">Título afectado por lista de selectores</h3>
+    <p class="lista-2">Párrafo afectado por la misma regla.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 34 • Tipos de selectores</div>
+<section>
+    <h2>Tipos de selectores</h2>
+    <p id="ejemplo-id">Este párrafo tiene un ID.</p>
+    <p class="ejemplo-clase">Este párrafo tiene una clase.</p>
+    <h3>Este es un h3 (selector de tipo).</h3>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 35 • Selectores de atributo</div>
+<section>
+    <h2>Selectores de atributo</h2>
+    <a href="#" title="info" class="link-atributo">Link con atributo title</a>
+    <input type="email" placeholder="email" class="input-atributo">
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 36 • Pseudoclases y pseudoelementos</div>
+<section>
+    <h2>Pseudoclases y pseudoelementos</h2>
+    <button class="btn-hover">Pasá el mouse por encima</button>
+    <p class="pseudo-texto">Este texto demostrará ::first-line y ::first-letter.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 37 • Combinadores</div>
+<section>
+    <h2>Combinadores</h2>
+    <article class="articulo">
+        <p>Este párrafo es hijo directo de article.</p>
+        <div>
+            <p>Este párrafo está dentro de un div dentro del article.</p>
+        </div>
+    </article>
+    <h3 class="hermano-titulo">Título</h3>
+    <p class="hermano-parrafo">Este párrafo es hermano adyacente del h3.</p>
+    <p class="hermano-general">Este párrafo es hermano general del h3.</p>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 38 • Tabla de referencia aplicada</div>
+<section>
+    <h2>Tabla de referencia aplicada</h2>
+    <ul class="tabla-selectores">
+        <li class="item">Selector de clase</li>
+        <li id="item-id">Selector de ID</li>
+        <li data-info="true">Selector de atributo</li>
+    </ul>
+</section>
+
+<hr>
+<div class="diapo-label">Diapositiva 39 • Ejemplo final</div>
+<section>
+    <h2>Ejemplo final integrador</h2>
+    <div class="contenedor-final">
+        <h3 class="titulo-final">Título final</h3>
+        <p class="texto-final">Este texto combina clase, pseudoclase y combinadores.</p>
+        <a href="#" class="link-final">Link final</a>
+    </div>
+</section>
+
+</body>
+</html>

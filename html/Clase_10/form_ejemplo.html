@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase 10 • Formulario de ejemplo</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <!-- CSS general + CSS de esta clase -->
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/clase10.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <h1>Formulario de ejemplo</h1>
+    <h2>Clase 10 – Formularios</h2>
+  </header>
+
+  <!-- Navegación -->
+  <section class="navegacion">
+    <a class="volver" href="clase10_guia_practica.html">Volver a la Guía Práctica Clase 10</a>
+  </section>
+
+  <main class="contenedor">
+    <section class="card">
+
+      <h3>Formulario completo de ejemplo</h3>
+      <p>Este formulario integra los elementos vistos en las diapositivas.</p>
+
+      <!-- ========================================================= -->
+      <!-- FORMULARIO DE EJEMPLO                                     -->
+      <!-- ========================================================= -->
+
+      <form>
+
+        <!-- =============================== -->
+        <!-- DIAPOSITIVA 8: Input de texto   -->
+        <!-- =============================== -->
+        <label for="nombre">Nombre completo:</label>
+        <input 
+          type="text" 
+          id="nombre" 
+          name="nombre" 
+          placeholder="Ej: Ana López"
+          required>
+
+        <!-- =============================== -->
+        <!-- DIAPOSITIVA 11: Password        -->
+        <!-- =============================== -->
+        <label for="pass">Contraseña:</label>
+        <input 
+          type="password" 
+          id="pass" 
+          name="pass" 
+          placeholder="Mínimo 6 caracteres"
+          minlength="6"
+          required>
+
+        <!-- =============================== -->
+        <!-- DIAPOSITIVA 13: Radios          -->
+        <!-- =============================== -->
+        <p>Género:</p>
+        <label><input type="radio" name="genero" value="femenino" required> Femenino</label>
+        <label><input type="radio" name="genero" value="masculino"> Masculino</label>
+        <label><input type="radio" name="genero" value="otro"> Otro</label>
+
+        <!-- =============================== -->
+        <!-- DIAPOSITIVA 14: Checkboxes      -->
+        <!-- =============================== -->
+        <p>Intereses:</p>
+        <label><input type="checkbox" name="intereses" value="html"> HTML</label>
+        <label><input type="checkbox" name="intereses" value="css"> CSS</label>
+        <label><input type="checkbox" name="intereses" value="js"> JavaScript</label>
+
+        <!-- =============================== -->
+        <!-- DIAPOSITIVA 24: Select          -->
+        <!-- =============================== -->
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" required>
+          <option value="">Seleccione una opción</option>
+          <option value="ar">Argentina</option>
+          <option value="uy">Uruguay</option>
+          <option value="cl">Chile</option>
+        </select>
+
+        <!-- =============================== -->
+        <!-- DIAPOSITIVA 22: Textarea        -->
+        <!-- =============================== -->
+        <label for="comentarios">Comentarios:</label>
+        <textarea 
+          id="comentarios" 
+          name="comentarios" 
+          rows="4" 
+          placeholder="Escriba su mensaje aquí"></textarea>
+
+        <!-- =============================== -->
+        <!-- DIAPOSITIVA 34–36: Validación   -->
+        <!-- =============================== -->
+        <label for="codigo">Código de 4 dígitos:</label>
+        <input 
+          type="text" 
+          id="codigo"
+          name="codigo" 
+          pattern="[0-9]{4}" 
+          required 
+          placeholder="0000">
+
+        <!-- =============================== -->
+        <!-- Botón de envío                  -->
+        <!-- =============================== -->
+        <button type="submit">Enviar formulario</button>
+
+      </form>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>ADA • Frontend · Clase 10 • Formulario de ejemplo</p>
+  </footer>
+
+</body>
+</html>

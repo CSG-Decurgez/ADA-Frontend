@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase 11 • Guía Práctica</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <!-- CSS general + CSS de esta clase -->
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/clase11.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <h1>Clase 11 • Selectores avanzados</h1>
+    <h2>Guía práctica basada en las diapositivas</h2>
+  </header>
+
+  <!-- Navegación -->
+  <section class="navegacion">
+    <a class="volver" href="../../index.html">Volver al índice</a>
+  </section>
+
+  <main class="contenedor">
+    <section class="card">
+
+      <!-- =============================== -->
+      <!-- INTRODUCCIÓN -->
+      <!-- =============================== -->
+      <h3>Introducción a los selectores avanzados</h3>
+      <p>Los selectores avanzados permiten aplicar estilos más específicos y potentes en CSS. A continuación veremos ejemplos prácticos de cada tipo.</p>
+
+      <!-- =============================== -->
+      <!-- SELECTORES DE ATRIBUTOS -->
+      <!-- =============================== -->
+      <h3>Selectores de atributos</h3>
+
+      <pre><code>
+/* [atributo] — Selecciona elementos que tienen un atributo */
+input[type] {
+  border: 2px solid steelblue;
+}
+
+/* [atributo="valor"] — Valor exacto */
+input[type="email"] {
+  background-color: #eef;
+}
+
+/* [atributo~="valor"] — Contiene una palabra */
+[class~="destacado"] {
+  color: crimson;
+}
+
+/* [atributo^="valor"] — Comienza con */
+a[href^="https://"] {
+  font-weight: bold;
+}
+
+/* [atributo$="valor"] — Termina con */
+img[src$=".png"] {
+  border: 3px solid green;
+}
+
+/* [atributo*="valor"] — Contiene */
+a[href*="example"] {
+  color: orange;
+}
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- SELECTORES DE JERARQUÍA -->
+      <!-- =============================== -->
+      <h3>Selectores avanzados para jerarquías</h3>
+
+      <pre><code>
+/* Hermano adyacente (A + B) */
+h1 + p {
+  color: teal;
+}
+
+/* Hermanos generales (A ~ B) */
+h1 ~ p {
+  font-style: italic;
+}
+
+/* Descendiente (A B) */
+div p {
+  margin-left: 20px;
+}
+
+/* Hijo directo (A > B) */
+ul > li {
+  background-color: #f5f5f5;
+}
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- SELECTOR UNIVERSAL -->
+      <!-- =============================== -->
+      <h3>Selector universal *</h3>
+
+      <pre><code>
+/* Aplica a todos los elementos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- PSEUDO-CLASES -->
+      <!-- =============================== -->
+      <h3>Pseudo‑clases</h3>
+
+      <pre><code>
+/* ::before y ::after */
+h1::before {
+  content: "★ ";
+}
+h1::after {
+  content: " ★";
+}
+
+/* :not() */
+button:not(.primario) {
+  background-color: lightgray;
+}
+
+/* :nth-child() */
+li:nth-child(2) {
+  color: purple;
+}
+
+/* :nth-of-type() */
+p:nth-of-type(2) {
+  font-weight: bold;
+}
+
+/* :hover */
+a:hover {
+  color: tomato;
+}
+
+/* :active */
+button:active {
+  transform: scale(0.95);
+}
+
+/* :focus */
+input:focus {
+  outline: 2px solid royalblue;
+}
+
+/* :target */
+#seccion1:target {
+  background-color: yellow;
+}
+
+/* :checked */
+input[type="checkbox"]:checked {
+  accent-color: green;
+}
+
+/* :valid / :invalid */
+input:valid {
+  border-color: green;
+}
+input:invalid {
+  border-color: red;
+}
+
+/* :placeholder-shown */
+input:placeholder-shown {
+  color: gray;
+}
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- EJEMPLO FINAL -->
+      <!-- =============================== -->
+      <h3>Ejemplo final integrador</h3>
+
+      <pre><code>
+<!-- HTML -->
+<div class="contenedor">
+  <h1>Título principal</h1>
+  <p class="texto destacado">Primer párrafo destacado.</p>
+  <p class="texto">Segundo párrafo normal.</p>
+
+  <a href="https://example.com" class="btn">Enlace externo</a>
+
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <input type="email" placeholder="Ingresá tu email">
+</div>
+
+<!-- CSS (resumen) -->
+.contenedor p.destacado {
+  color: crimson;
+}
+
+h1 + p {
+  font-size: 1.2rem;
+}
+
+ul > li:nth-child(3) {
+  background-color: #ffe;
+}
+
+input:focus {
+  outline: 2px solid steelblue;
+}
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- EJERCITACIÓN -->
+      <!-- =============================== -->
+      <h3>Ejercitación</h3>
+      <p>Podés practicar con los ejercicios del repositorio oficial:</p>
+      <a href="https://github.com/Ada-IT/ejercicios-frontend/tree/master/modulo-2/ejercicios/selectores" target="_blank">
+        Ejercicios de selectores avanzados
+      </a>
+
+      <!-- =============================== -->
+       <!-- JUEGO RECOMENDADO: CSS DINER -->
+        <!-- =============================== -->
+         <h3>Practicá selectores con CSS Diner</h3>
+         <p>
+            CSS Diner es un juego interactivo para practicar selectores avanzados de CSS.
+            Cada nivel te pide seleccionar elementos usando distintos tipos de selectores
+            (clases, atributos, descendientes, hijos directos, etc.).
+            Es una forma visual y divertida de reforzar lo aprendido en esta clase.
+        </p>
+
+<a href="https://flukeout.github.io/" target="_blank">
+  Jugar a CSS Diner
+</a>
+
+    </section>
+
+    <footer>
+      <p>ADA • Frontend · Clase 11 • Guía Práctica</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>

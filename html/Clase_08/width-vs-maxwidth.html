@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Width vs Max-Width • Ejemplos Combinados</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+
+    .demo-box {
+      border: 2px solid #ccc;
+      padding: 1rem;
+      margin-bottom: 3rem;
+      background: #fafafa;
+    }
+
+    .contenedor {
+      border: 2px dashed #CD0055;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      background: white;
+    }
+
+    /* Imagen con width: 100% */
+    .img-width {
+      width: 100%;
+      border: 2px solid #0077cc;
+    }
+
+    /* Imagen con max-width: 100% */
+    .img-maxwidth {
+      max-width: 100%;
+      border: 2px solid #009944;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      border: 1px solid #ddd;
+      margin: 2rem 0;
+    }
+
+    code {
+      font-family: "Courier New", monospace;
+      font-size: 0.95rem;
+      color: #333;
+      white-space: pre;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Width vs Max-Width</h1>
+  <p>Ejemplos combinados para entender cómo se comportan las imágenes según el tamaño del contenedor.</p>
+
+  <!-- ========================================================= -->
+  <!-- 1) CONTENEDOR MÁS GRANDE QUE LA IMAGEN                    -->
+  <!-- ========================================================= -->
+  <h2>1. Contenedor más grande que la imagen</h2>
+  <p>
+    La imagen <strong>kitten.jpg (600px de ancho)</strong> está dentro de un contenedor de
+    <strong>900px</strong>. Aquí sí se ve la diferencia:
+  </p>
+
+  <div class="demo-box">
+    <p><strong>width: 100%</strong> → la imagen se estira hasta 900px</p>
+
+    <div class="contenedor" style="width: 900px;">
+      <img src="../../images/kitten.jpg" alt="gatito" class="img-width">
+    </div>
+
+    <p>La imagen se agranda más allá de su tamaño real.</p>
+  </div>
+
+  <div class="demo-box">
+    <p><strong>max-width: 100%</strong> → la imagen se frena en 600px</p>
+
+    <div class="contenedor" style="width: 900px;">
+      <img src="../../images/kitten.jpg" alt="gatito" class="img-maxwidth">
+    </div>
+
+    <p>La imagen NO se estira más de su tamaño real.</p>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 2) CONTENEDOR MÁS CHICO QUE LA IMAGEN                     -->
+  <!-- ========================================================= -->
+  <h2>2. Contenedor más chico que la imagen</h2>
+  <p>
+    Ahora el contenedor mide <strong>300px</strong>.  
+    La imagen mide 600px, así que en ambos casos se achica para entrar.
+  </p>
+
+  <div class="demo-box">
+    <p><strong>width: 100%</strong> → la imagen se comprime a 300px</p>
+
+    <div class="contenedor" style="width: 300px;">
+      <img src="../../images/kitten.jpg" alt="gatito" class="img-width">
+    </div>
+
+    <p>La imagen se achica proporcionalmente.</p>
+  </div>
+
+  <div class="demo-box">
+    <p><strong>max-width: 100%</strong> → también se comprime a 300px</p>
+
+    <div class="contenedor" style="width: 300px;">
+      <img src="../../images/kitten.jpg" alt="gatito" class="img-maxwidth">
+    </div>
+
+    <p>En este caso, max-width y width se comportan igual.</p>
+  </div>
+
+</body>
+</html>

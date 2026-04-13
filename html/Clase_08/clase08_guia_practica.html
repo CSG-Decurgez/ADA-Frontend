@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase 08 • Guía práctica • Diseño Responsivo I</title>
+
+  <!-- Tipografías Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/clase08.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <h1>Clase 08 • Diseño Responsivo I</h1>
+    <p>Guía práctica para aplicar unidades relativas, imágenes responsivas y media queries.</p>
+  </header>
+
+  <!-- Navegación -->
+  <section class="navegacion">
+    <a class="volver" href="../../index.html">← Volver al índice</a>
+  </section>
+
+  <!-- CONTENEDOR CENTRAL -->
+  <main class="contenedor">
+    <section class="card">
+
+      <!-- ========================= -->
+      <!-- 1. Meta viewport          -->
+      <!-- ========================= -->
+      <section>
+        <h2>1. Meta viewport</h2>
+        <p>Para que el diseño responda correctamente en dispositivos móviles, agregamos esta etiqueta en el <code>&lt;head&gt;</code>:</p>
+
+<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+</code></pre>
+
+        <p>Esto evita zooms automáticos y asegura que el ancho del sitio coincida con el ancho del dispositivo.</p>
+      </section>
+
+      <!-- ========================= -->
+      <!-- 2. Unidades relativas     -->
+      <!-- ========================= -->
+      <section>
+        <h2>2. Unidades relativas: %, vh, vw</h2>
+
+        <p><strong>%</strong> depende del contenedor padre. <strong>vh</strong> y <strong>vw</strong> dependen del tamaño de la pantalla.</p>
+
+        <div class="demo-relativas">
+          <div class="box porcentaje">50% del ancho</div>
+          <div class="box vh">30vh de alto</div>
+          <div class="box vw">40vw de ancho</div>
+        </div>
+
+<pre><code>/* clase08.css */
+.porcentaje { width: 50%; background: #CD0055; color: white; }
+.vh { height: 30vh; background: #555; color: white; }
+.vw { width: 40vw; background: #777; color: white; }
+</code></pre>
+      </section>
+
+      <!-- ========================= -->
+      <!-- 3. em y rem               -->
+      <!-- ========================= -->
+      <section>
+        <h2>3. Unidades relativas: em y rem</h2>
+
+        <p><strong>em</strong> depende del tamaño de fuente del contenedor. <strong>rem</strong> depende del tamaño raíz.</p>
+
+        <div class="demo-texto">
+          <p class="texto-rem">Este texto usa <strong>1.5rem</strong>.</p>
+          <div class="contenedor-em">
+            <p>Este contenedor tiene <strong>font-size: 1.2em</strong>.</p>
+            <p>Este texto hereda ese tamaño.</p>
+          </div>
+        </div>
+
+<pre><code>/* clase08.css */
+.texto-rem { font-size: 1.5rem; }
+.contenedor-em { font-size: 1.2em; background: #eee; padding: 1rem; }
+</code></pre>
+      </section>
+
+      <!-- ========================= -->
+      <!-- 4. calc()                 -->
+      <!-- ========================= -->
+      <section>
+        <h2>4. Cálculos con CSS</h2>
+
+        <p>Podemos combinar unidades con <code>calc()</code>:</p>
+
+<pre><code>.caja-calc {
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  background: #CD0055;
+  color: white;
+}
+</code></pre>
+
+        <div class="caja-calc">Este ancho usa calc().</div>
+      </section>
+
+      <!-- ========================= -->
+      <!-- 5. Imágenes responsivas   -->
+      <!-- ========================= -->
+      <section>
+        <h2>5. Imágenes responsivas</h2>
+
+        <h3>1) Imagen que se adapta al contenedor</h3>
+<pre><code>img { max-width: 100%; height: auto; }
+</code></pre>
+
+        <img src="../../images/clase_08_hero.jpg" alt="Ejemplo" class="img-resp">
+
+        <h3>2) Usando srcset (demostración)</h3>
+<pre><code>&lt;img 
+  src="image1-400.jpg"
+  srcset="image1-800.jpg 800w, image1-1200.jpg 1200w"
+  alt="Ejemplo"&gt;
+</code></pre>
+
+        <h3>3) Usando picture (demostración)</h3>
+<pre><code>&lt;picture&gt;
+  &lt;source media="(min-width: 800px)" srcset="image1-large.jpg"&gt;
+  &lt;img src="image1-small.jpg" alt="Ejemplo"&gt;
+&lt;/picture&gt;
+</code></pre>
+      </section>
+
+      <!-- ========================= -->
+      <!-- 6. Media Queries          -->
+      <!-- ========================= -->
+      <section>
+        <h2>6. Media Queries</h2>
+
+        <p>Trabajamos con enfoque <strong>Mobile First</strong>:</p>
+
+<pre><code>/* Estilos base (móvil) */
+body { font-size: 1rem; }
+
+/* Tablet */
+@media (min-width: 768px) {
+  body { font-size: 1.2rem; }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  body { font-size: 1.4rem; }
+}
+</code></pre>
+
+        <p>Probá cambiar el tamaño de la ventana para ver el efecto.</p>
+      </section>
+
+      <!-- ========================= -->
+      <!-- 7. Grid responsivo        -->
+      <!-- ========================= -->
+      <section>
+        <h2>7. Grid responsivo</h2>
+
+        <p>Una galería que se adapta automáticamente:</p>
+
+        <div class="gallery">
+          <img src="../../images/clase_08_a.jpg" alt="">
+          <img src="../../images/clase_08_b.jpg" alt="">
+          <img src="../../images/clase_08_c.jpg" alt="">
+          <img src="../../images/clase_08_d.jpg" alt="">
+        </div>
+
+<pre><code>.gallery {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+</code></pre>
+      </section>
+
+      <!-- ========================= -->
+      <!-- 8. Mini Landing           -->
+      <!-- ========================= -->
+      <section>
+        <h2>8. Mini Landing Responsiva</h2>
+        <p>Ejemplo de mini landing que reúne todos los conceptos vistos y adelanta la práctica de la Clase 9.</p>
+        <p>En el archivo clase08.css se incluyen los estilos comentados como Mini Landing.</p>
+        <p><a href="clase08_minilanding.html">Ver Mini Landing</a></p>
+      </section>
+
+      <!-- ========================= -->
+      <!-- 9. Material complementario -->
+      <!-- ========================= -->
+      <section>
+        <h2>9. Material complementario</h2>
+        <ul>
+          <li><a href="https://ada7matm.github.io/pages/media-query.html" target="_blank">Visualizador de Media Queries</a></li>
+          <li><a href="https://www.freecodecamp.org/news/how-to-start-thinking-responsively/" target="_blank">Cómo pensar responsivamente</a></li>
+          <li><a href="https://github.com/Ada-IT/ejercicios-frontend/blob/master/modulo-1/ejercicios/10-diseño-responsivo-I.md" target="_blank">Ejercicio Responsivo I</a></li>
+          <li><a href="https://github.com/Ada-IT/ejercicios-frontend/blob/master/modulo-1/ejercicios/11-diseño-responsivo-II.md" target="_blank">Ejercicio Responsivo II</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>10. Width vs Max Width</h2>
+        <p>A partir de la consulta en clase de cual era la diferencia entre usar por ej. width: 100% o max-width: 100% les dejo un ejemplo con una imagen.</p>
+        <h3>¿Qué muestra este ejemplo?</h3>
+        <p>Escenario 1 — Contenedor grande<br>
+          - width: 100% → **estira** la imagen<br>
+          - max-width: 100% → **respeta el tamaño real**</p>
+        <p>Escenario 2 — Contenedor chico<br>
+          - Ambas se achican → **la imagen se comprime proporcionalmente**</p>
+          <p>La diferencia sólo aparece cuando el contenedor es más grande que la imagen.<br>
+            Si el contenedor es más chico, ambas reglas se comportan igual.</p>
+        </p>
+        <p><a href="width-vs-maxwidth.html" target="_blank">Ver ejemplo</a></p>
+      </section>
+
+    </section>
+  </main>
+</body>
+</html>

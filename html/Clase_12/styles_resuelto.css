@@ -1,0 +1,120 @@
+/* ==========================================================
+   ACTIVIDAD: SELECTORES AVANZADOS Y PSEUDO-CLASES
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   Paso 2: aplicar selectores avanzados
+   ---------------------------------------------------------- */
+
+/* 1. Selectores de atributos:
+
+a - Estiliza todos los enlaces que contengan # en su atributo href */
+
+a[href^="#"] {
+    color: teal;
+    font-weight: bold;
+}
+
+/* b - Cambia el color de los input que tengan un atributo type="email": */
+input[type="email"] {
+    border: 2px solid blue;
+}
+
+
+/* 2. Selector hermano adyacente y hermanos:
+
+c - Cambia el estilo del párrafo que sigue inmediatamente después de un h2: */
+
+h2 + p {
+  color: green;
+  font-style: italic;
+}
+
+/* d - Cambia el color de todos los li hermanos dentro de la lista */
+
+li ~ li {
+    color: purple;
+}
+
+
+/* 3. Selector descendiente y directo:
+
+e - Estiliza todos los p dentro de section */
+
+section p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* f - Cambia el estilo sólo de los hijos directos de ul */
+
+ul > li {
+    text-transform: uppercase;
+}
+
+/* 4. Selector universal:
+
+g - Aplica un margen cero a todos los elementos: */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------
+   Paso 3: aplicar pseudo-clases
+   ---------------------------------------------------------- */
+
+/* 5. Estiliza elementos con pseudo-clases dinámicas:
+
+h. Cambia el color del botón al pasar el mouse encima: */
+
+button:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+/* i. Estiliza el enlace activo del menú */
+
+a:active {
+    color: red;
+}
+
+/* 6. Estiliza con pseudo-clases estructurales:
+
+j. Cambia el estilo del segundo elemento de la lista */
+
+li:nth-child(2) {
+    color: magenta;
+}
+
+/* k. Cambia el fondo del último párrafo del main */
+
+main section:last-of-type p {
+    background-color: lightblue;
+}
+
+/* 7. Pseudo-clases de validación y estado:
+
+l. Cambia el borde de los campos de formulario válidos */
+
+input:valid {
+  border: 2px solid green;
+}
+
+/* m. Cambia el borde de los campos inválidos */
+
+input:invalid {
+  border: 2px solid red;
+}
+
+/* 8. Estiliza el placeholder:
+n. Cambia el color del texto del placeholder mientras es visible */
+
+input:placeholder-shown {
+    color: rgb(30, 255, 0);
+    font-style: italic;
+}

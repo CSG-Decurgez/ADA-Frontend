@@ -1,0 +1,22 @@
+<?xml version="1.0"?><svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <title>botao salvar</title>
+ <defs>
+  <linearGradient id="linearGradient1221">
+   <stop stop-color="#ffffff" offset="0" id="stop1222"/>
+   <stop stop-color="#ffffff" stop-opacity="0.058333" offset="1" id="stop1223"/>
+  </linearGradient>
+  <linearGradient y2="1.076923" y1="-0.807692" xlink:href="#linearGradient1221" x2="0.514493" x1="0.485507" id="linearGradient1220"/>
+  <linearGradient id="linearGradient3180">
+   <stop stop-color="#fff9f9" stop-opacity="0.291667" offset="0" id="stop3181"/>
+   <stop stop-color="#0068e5" offset="1" id="stop3182"/>
+  </linearGradient>
+  <linearGradient y2="0.804878" y1="-0.012195" xlink:href="#linearGradient3180" x2="0.536232" x1="0.514493" id="linearGradient1217"/>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <rect fill="url(#linearGradient1217)" fill-rule="evenodd" stroke="#000000" stroke-width="2.3298441pt" y="-381.62912" x="-655.93707" width="555.29993" transform="scale(-1) " ry="81.788361" rx="81.079254" id="rect1216" height="163.57672"/>
+  <text font-weight="bold" fill="#fbffff" fill-opacity="0.5" stroke-width="1.0000000pt" font-family="Bitstream Vera Sans" y="49.19273" x="37.518055" transform="scale(6.5640740394592285) " id="text5209">Enviar</text>
+  <text font-weight="bold" fill="#0071ce" stroke-width="1.0000000pt" font-family="Bitstream Vera Sans" y="48.87907" x="37.204403" transform="translate(0,-1) scale(6.5640740394592285) " id="text2006">Enviar</text>
+  <path fill="url(#linearGradient1220)" fill-rule="evenodd" stroke-width="1.0000000pt" id="path1219" d="m183.927628,223.600693c-46.213196,7.371384 -69.608955,50.579514 0,56.597519c129.781693,0 259.563431,0 389.3452,0c93.276123,2.12854 39.627441,-50.068832 0,-56.597519c-129.781738,0 -259.563446,0 -389.3452,0z"/>
+ </g>
+</svg>

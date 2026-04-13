@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase 06 – Modelo de Caja – Guía práctica</title>
+    <link rel="stylesheet" href="../../css/clase06.css">
+</head>
+<body>
+
+<!-- ========================================================= -->
+<!-- CLASE 06 – MODELO DE CAJA – GUÍA PRÁCTICA                -->
+<!-- Archivo: clase06_guia_practica.html                      -->
+<!-- ========================================================= -->
+
+<h1>Clase 06 – Modelo de Caja – Guía práctica</h1>
+<p>Abrí este archivo junto con el PPT y el CSS <code>clase06.css</code> para ver cada ejemplo en el navegador.</p>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 01 • MODELO DE CAJA (DIAPOS: INTRO + ESQUEMA)     -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 01 • Modelo de caja</div>
+
+<section class="boxmodel-demo">
+    <h2>Modelo de caja básico</h2>
+    <p>Esta caja muestra las capas: contenido, padding, borde y margen.</p>
+
+    <div class="boxmodel-ejemplo">
+        Contenido de la caja
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 02 • ELEMENTOS BLOCK E INLINE                     -->
+<!-- (DIAPO: BLOCK VS INLINE)                                 -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 02 • Elementos block e inline</div>
+
+<section class="block-inline-demo">
+    <h2>Elementos en bloque vs en línea</h2>
+
+    <h3>Elementos en bloque</h3>
+    <p class="bloque-ejemplo">Soy un párrafo en bloque. Ocupo todo el ancho disponible.</p>
+    <p class="bloque-ejemplo">Soy otro párrafo en bloque. Aparezco debajo del anterior.</p>
+
+    <h3>Elementos en línea</h3>
+    <p>
+        Texto normal con
+        <span class="inline-ejemplo">un span en línea</span>
+        y
+        <span class="inline-ejemplo">otro span en línea</span>.
+    </p>
+
+    <h3>Inline con margin-top / margin-bottom</h3>
+    <p>
+        <span class="inline-margin">Inline con margin-top y margin-bottom</span>
+        (no desplaza otras cajas verticalmente).
+    </p>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 03 • CÁLCULO DEL ANCHO REAL                       -->
+<!-- (DIAPO: IMPORTANTE – ANCHO REAL)                         -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 03 • Cálculo del ancho real</div>
+
+<section class="ancho-real-demo">
+    <h2>Ancho real en el modelo estándar</h2>
+    <p>La caja de abajo tiene width, padding, border y margin. El ancho total es la suma de todo.</p>
+
+    <div class="ancho-real-caja">
+        Caja con width, padding, border y margin
+    </div>
+
+    <p class="ancho-real-nota">
+        Ancho total = width + padding izquierdo/derecho + border izquierdo/derecho + margin izquierdo/derecho.
+    </p>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 04 • BACKGROUND-COLOR                             -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 04 • background-color</div>
+
+<section class="bgcolor-demo">
+    <h2>Color de fondo de una caja</h2>
+
+    <div class="bgcolor-caja bgcolor-gris">
+        Caja con background-color: #eee;
+    </div>
+
+    <div class="bgcolor-caja bgcolor-transparente">
+        Caja con background-color: transparent (se ve el fondo del body).
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 05 • WIDTH Y HEIGHT                               -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 05 • width y height</div>
+
+<section class="width-height-demo">
+    <h2>Ancho y alto de una caja</h2>
+
+    <div class="caja-200">
+        width: 200px; height: 200px;
+    </div>
+
+    <div class="caja-porcentaje">
+        width: 50%; height: 100px; (depende del ancho del contenedor)
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 06 • MIN/MAX WIDTH/HEIGHT                         -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 06 • min-width / max-width / min-height / max-height</div>
+
+<section class="minmax-demo">
+    <h2>Valores mínimos y máximos</h2>
+
+    <div class="caja-minmax">
+        Esta caja tiene min-width y min-height de 100px. Si el contenido crece, la caja se agranda, pero nunca es menor a 100px.
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 07 • OVERFLOW                                     -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 07 • overflow</div>
+
+<section class="overflow-demo">
+    <h2>Contenido extra y overflow</h2>
+
+    <div class="overflow-caja overflow-hidden">
+        <strong>overflow: hidden;</strong><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet.
+    </div>
+
+    <div class="overflow-caja overflow-scroll">
+        <strong>overflow: scroll;</strong><br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet.
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 08 • BORDES (SHORTHAND + PROPIEDADES INDIVIDUALES)-->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 08 • Bordes</div>
+
+<section class="border-demo">
+    <h2>Bordes de la caja</h2>
+
+    <h3>Shorthand border</h3>
+    <div class="border-shorthand">
+        border: 1px solid red;
+    </div>
+
+    <h3>Propiedades individuales</h3>
+    <div class="border-individual">
+        border-width: 1px; border-style: solid; border-color: red;
+    </div>
+
+    <h3>Estilos de borde</h3>
+    <div class="border-style border-solid">solid</div>
+    <div class="border-style border-dotted">dotted</div>
+    <div class="border-style border-dashed">dashed</div>
+    <div class="border-style border-double">double</div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 09 • BORDES CON 4 VALORES / LADOS                 -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 09 • Bordes con 4 valores</div>
+
+<section class="border-multi-demo">
+    <h2>border-width con varios valores</h2>
+
+    <div class="border-width-4">
+        border-width: 2px 1px 1px 2px;
+    </div>
+
+    <div class="border-width-2">
+        border-width: 2px 1px; (top/bottom 2px, right/left 1px)
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 10 • PADDING (AIRE INTERNO)                       -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 10 • Padding</div>
+
+<section class="padding-demo">
+    <h2>Aire interno de la caja (padding)</h2>
+
+    <div class="padding-uno">
+        padding: 20px;
+    </div>
+
+    <div class="padding-cuatro">
+        padding: 20px 40px 25px 30px;
+    </div>
+
+    <div class="padding-dos">
+        padding: 20px 40px;
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 11 • MÁRGENES                                     -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 11 • Márgenes</div>
+
+<section class="margin-demo">
+    <h2>Márgenes externos</h2>
+
+    <div class="margin-bg">
+        Caja con background-color y margin: el margen es externo, no muestra color de fondo.
+    </div>
+
+    <div class="margin-uno">
+        margin: 20px;
+    </div>
+
+    <div class="margin-dos">
+        margin: 20px 30px;
+    </div>
+
+    <div class="margin-cuatro">
+        margin: 20px 30px 35px 40px;
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 12 • MÁRGENES INDIVIDUALES Y AUTO                 -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 12 • Márgenes individuales y centrado con auto</div>
+
+<section class="margin-individual-demo">
+    <h2>Márgenes individuales</h2>
+
+    <div class="margin-individual">
+        margin-top: 20px; margin-right: 30px; margin-bottom: 35px; margin-left: 40px;
+    </div>
+
+    <h2>Centrar una caja con margin: 0 auto;</h2>
+
+    <div class="caja-centrada">
+        width: 500px; margin: 0 auto;
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 13 • BOX-SHADOW                                   -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 13 • Sombra de caja (box-shadow)</div>
+
+<section class="boxshadow-demo">
+    <h2>Sombra externa e interna</h2>
+
+    <div class="boxshadow-externa">
+        box-shadow: 1px 2px 5px -3px #aaa;
+    </div>
+
+    <div class="boxshadow-interna">
+        box-shadow: inset 1px 2px 5px -3px #aaa;
+    </div>
+
+    <p class="nota-generador">
+        Para practicar sombras en tiempo real: <a href="https://cssgenerator.org/box-shadow-css-generator.html" target="_blank">cssgenerator.org – box-shadow</a>
+    </p>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 14 • DISPLAY                                      -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 14 • display</div>
+
+<section class="display-demo">
+    <h2>Cambiar la forma en que se comporta un elemento</h2>
+
+    <div class="display-block">
+        Soy un div con display: block;
+    </div>
+
+    <span class="display-inline">
+        Soy un span con display: inline;
+    </span>
+
+    <div class="display-inline-block">
+        Soy un div con display: inline-block;
+    </div>
+
+    <p class="display-none">
+        Este párrafo tiene display: none; (no se ve ni ocupa espacio).
+    </p>
+
+    <p class="visibility-hidden">
+        Este párrafo tiene visibility: hidden; (no se ve, pero ocupa espacio).
+    </p>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 15 • BORDER-RADIUS                                -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 15 • Bordes redondeados</div>
+
+<section class="borderradius-demo">
+    <h2>border-radius básico</h2>
+
+    <div class="radius-simple">
+        border-radius: 40px 50px;
+    </div>
+
+    <div class="radius-esquinas">
+        border-top-right-radius: 40px 50px;<br>
+        border-top-left-radius: 50px 30px;
+    </div>
+
+    <p class="nota-generador">
+        Generador interactivo: <a href="https://9elements.github.io/fancy-border-radius/" target="_blank">9elements – fancy border radius</a>
+    </p>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 16 • BACKGROUND-IMAGE / REPEAT / POSITION / ATT   -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 16 • Imágenes de fondo</div>
+
+<section class="background-image-demo">
+    <h2>Imagen de fondo básica</h2>
+
+    <div class="bg-image-uno">
+        background-image: url(../../images/ejemplo1.png);
+    </div>
+
+    <h2>Repetición del fondo</h2>
+
+    <div class="bg-repeat-no">
+        background-repeat: no-repeat;
+    </div>
+
+    <div class="bg-repeat-si">
+        background-repeat: repeat;
+    </div>
+
+    <h2>Posición del fondo</h2>
+
+    <div class="bg-position-ejemplo">
+        background-position: 10px 20px;
+    </div>
+
+    <div class="bg-position-center-bottom">
+        background-position: center bottom;
+    </div>
+
+    <h2>Fijar el fondo</h2>
+
+    <div class="bg-attachment-fixed">
+        background-attachment: fixed;
+    </div>
+
+    <div class="bg-attachment-scroll">
+        background-attachment: scroll;
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 17 • BACKGROUND SHORTHAND                         -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 17 • background (shorthand)</div>
+
+<section class="background-shorthand-demo">
+    <h2>Shorthand de background</h2>
+
+    <div class="bg-shorthand">
+        background: red url(../../images/yacubee-cat-7533717_1920.jpg) no-repeat fixed center center;
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 18 • LINEAR-GRADIENT                              -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 18 • Gradiente de fondo</div>
+
+<section class="gradient-demo">
+    <h2>linear-gradient</h2>
+
+    <div class="gradient-caja">
+        background: linear-gradient(60deg, blue, green);
+    </div>
+</section>
+
+<hr>
+
+<!-- ========================================================= -->
+<!-- BLOQUE 19 • MODELO DE CAJA ESTÁNDAR Y ALTERNATIVO        -->
+<!-- ========================================================= -->
+
+<div class="diapo-label">Bloque 19 • Modelo de caja estándar vs alternativo</div>
+
+<section class="boxsizing-demo">
+    <h2>Modelo estándar (content-box)</h2>
+
+    <div class="box-standard">
+        .box-standard {<br>
+        &nbsp;&nbsp;width: 350px;<br>
+        &nbsp;&nbsp;height: 150px;<br>
+        &nbsp;&nbsp;margin: 10px;<br>
+        &nbsp;&nbsp;padding: 25px;<br>
+        &nbsp;&nbsp;border: 5px solid black;<br>
+        }
+    </div>
+
+    <h2>Modelo alternativo (border-box)</h2>
+
+    <div class="box-borderbox">
+        .box-borderbox {<br>
+        &nbsp;&nbsp;box-sizing: border-box;<br>
+        &nbsp;&nbsp;width: 350px;<br>
+        &nbsp;&nbsp;height: 150px;<br>
+        &nbsp;&nbsp;margin: 10px;<br>
+        &nbsp;&nbsp;padding: 25px;<br>
+        &nbsp;&nbsp;border: 5px solid black;<br>
+        }
+    </div>
+    <br><br><br><br><br><br><br><br>
+</section>
+
+</body>
+</html>

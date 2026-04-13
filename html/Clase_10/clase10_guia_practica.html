@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase 10 • Guía Práctica</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <!-- CSS general + CSS de esta clase -->
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/clase10.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <h1>Clase 10 • Formularios</h1>
+    <h2>Guía práctica basada en las diapositivas</h2>
+  </header>
+
+  <!-- Navegación -->
+  <section class="navegacion">
+    <a class="volver" href="../../index.html">Volver al índice</a>
+  </section>
+
+  <main class="contenedor">
+    <section class="card">
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: <form> -->
+      <!-- =============================== -->
+      <h3>La etiqueta &lt;form&gt;</h3>
+      <p>Ejemplo básico del formulario vacío.</p>
+
+      <pre><code>
+<!-- Ejemplo de la diapositiva "La etiqueta form" -->
+<form action="#" method="get">
+  <!-- Aquí irán los campos -->
+</form>
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: INPUT TEXT -->
+      <!-- =============================== -->
+      <h3>Input de texto</h3>
+
+      <pre><code>
+<!-- Ejemplo de input type="text" (Diapositiva 8) -->
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre" name="nombre">
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: value / placeholder -->
+      <!-- =============================== -->
+      <h3>Atributos value y placeholder</h3>
+
+      <pre><code>
+<!-- Ejemplo de value y placeholder (Diapositiva 9) -->
+<input type="text" name="usuario" value="Ejemplo pre-cargado">
+<input type="text" name="email" placeholder="Ingresá tu email">
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: size / maxlength -->
+      <!-- =============================== -->
+      <h3>Atributos size y maxlength</h3>
+
+      <pre><code>
+<!-- Ejemplo de size y maxlength (Diapositiva 10) -->
+<input type="text" name="codigo" size="20" maxlength="10" placeholder="Máx 10 caracteres">
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: PASSWORD -->
+      <!-- =============================== -->
+      <h3>Input de contraseña</h3>
+
+      <pre><code>
+<!-- Ejemplo de input type="password" (Diapositiva 11) -->
+<label for="pass">Contraseña:</label>
+<input type="password" id="pass" name="pass" maxlength="12">
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: SUBMIT -->
+      <!-- =============================== -->
+      <h3>Botón de envío</h3>
+
+      <pre><code>
+<!-- Ejemplo de input type="submit" (Diapositiva 12) -->
+<input type="submit" value="Enviar formulario">
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: RADIO -->
+      <!-- =============================== -->
+      <h3>Radio buttons</h3>
+
+      <pre><code>
+<!-- Ejemplo de radios (Diapositiva 13) -->
+<p>Género:</p>
+<label><input type="radio" name="genero" value="femenino"> Femenino</label>
+<label><input type="radio" name="genero" value="masculino"> Masculino</label>
+<label><input type="radio" name="genero" value="otro" checked> Otro</label>
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: CHECKBOX -->
+      <!-- =============================== -->
+      <h3>Checkboxes</h3>
+
+      <pre><code>
+<!-- Ejemplo de checkboxes (Diapositiva 14) -->
+<p>Intereses:</p>
+<label><input type="checkbox" name="intereses" value="html"> HTML</label>
+<label><input type="checkbox" name="intereses" value="css"> CSS</label>
+<label><input type="checkbox" name="intereses" value="js"> JavaScript</label>
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: HIDDEN -->
+      <!-- =============================== -->
+      <h3>Input oculto</h3>
+
+      <pre><code>
+<!-- Ejemplo de input hidden (Diapositiva 15) -->
+<input type="hidden" name="producto_id" value="1234">
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: IMAGE BUTTON -->
+      <!-- =============================== -->
+      <h3>Botón con imagen</h3>
+
+      <pre><code>
+<!-- Ejemplo de input type="image" (Diapositiva 16) -->
+<input type="image" src="../../images/boton-enviar.svg" alt="Enviar" width="200px">
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: INPUTS HTML5 -->
+      <!-- =============================== -->
+      <h3>Inputs especiales de HTML5</h3>
+
+      <pre><code>
+<!-- Ejemplos de inputs HTML5 (Diapositivas 17–21) -->
+<input type="date" name="fecha">
+<input type="email" name="correo" placeholder="email@ejemplo.com">
+<input type="url" name="sitio" placeholder="https://...">
+<input type="search" name="busqueda" placeholder="Buscar...">
+<input type="file" name="archivo">
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: TEXTAREA -->
+      <!-- =============================== -->
+      <h3>Textarea</h3>
+
+      <pre><code>
+<!-- Ejemplo de textarea (Diapositiva 22) -->
+<textarea name="comentarios" rows="4" cols="40" placeholder="Escribí tu mensaje aquí"></textarea>
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: SELECT -->
+      <!-- =============================== -->
+      <h3>Drop-down (select)</h3>
+
+      <pre><code>
+<!-- Ejemplo de select + option (Diapositivas 24–26) -->
+<select name="pais">
+  <option value="ar">Argentina</option>
+  <option value="uy">Uruguay</option>
+  <option value="cl" selected>Chile</option>
+</select>
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: BUTTON -->
+      <!-- =============================== -->
+      <h3>Botón personalizado</h3>
+
+      <pre><code>
+<!-- Ejemplo de <button> (Diapositiva 27) -->
+<button>Hacer clic</button>
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: LABEL -->
+      <!-- =============================== -->
+      <h3>Label</h3>
+
+      <pre><code>
+<!-- Ejemplo de label + for (Diapositiva 29) -->
+<label for="telefono">Teléfono:</label>
+<input type="text" id="telefono" name="telefono">
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: FIELDSET -->
+      <!-- =============================== -->
+      <h3>Agrupar campos</h3>
+
+<pre><code>
+<!-- Ejemplo de fieldset + legend (Diapositiva 32) -->
+<fieldset>
+  <legend>Datos personales</legend>
+  <input type="text" placeholder="Nombre">
+  <input type="text" placeholder="Apellido">
+</fieldset>
+      </code></pre>
+
+      <!-- =============================== -->
+      <!-- DIAPOSITIVA: VALIDACIÓN -->
+      <!-- =============================== -->
+      <h3>Validación HTML5</h3>
+
+<pre><code>
+<!-- Ejemplo de required y pattern (Diapositivas 34–36) -->
+
+<form>
+  <!-- Campo obligatorio: email -->
+  <label for="correo">Ingrese su email:</label>
+  <input 
+    type="email" 
+    id="correo"
+    name="correo" 
+    required 
+    placeholder="email@ejemplo.com">
+
+  <!-- Campo obligatorio con patrón: 4 dígitos -->
+  <label for="codigo">Escriba un número de 4 dígitos:</label>
+  <input 
+    type="text" 
+    id="codigo"
+    name="codigo" 
+    pattern="[0-9]{4}" 
+    required 
+    placeholder="0000">
+
+  <!-- Botón que activa la validación HTML5 -->
+  <button type="submit">Validar</button>
+</form>
+</code></pre>
+<h3>Más información (diapositivas finales)</h3>
+<ul>
+  <li><a href="https://developer.mozilla.org/es/docs/Learn/Forms" target="_blank">MDN – Formularios HTML</a></li>
+  <li><a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/input" target="_blank">MDN – Input</a></li>
+  <li><a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">W3Schools – HTML Forms</a></li>
+  <li><a href="https://www.w3schools.com/html/html_form_input_types.asp" target="_blank">W3Schools – Input Types</a></li>
+</ul>
+<h3>Formulario de Ejemplo</h3>
+<a href="form_ejemplo.html">Ver formulario de ejemplo</a>
+
+    </section>
+
+    <footer>
+      <p>ADA • Frontend · Clase 10 • Guía Práctica</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
