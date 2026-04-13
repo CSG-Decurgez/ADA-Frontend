@@ -1,0 +1,29 @@
+/* clase09.css */
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: #CD0055;
+  margin-bottom: 0.5rem;
+}
+
+h2, h3, h4 {
+  color: #333;
+  margin-top: 1.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  margin-left: 1.5rem;
+}
+
+pre {
+  background: #f7f7f7;
+  padding: 1rem;
+  border-left: 4px solid #CD0055;
+}

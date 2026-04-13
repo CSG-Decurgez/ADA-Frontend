@@ -1,0 +1,215 @@
+/* ========================================================= */
+/* Diapositiva 3 • Tipografías en la web */
+/* ========================================================= */
+.ejemplo-1 {
+    font-family: Arial, sans-serif;
+    color: black;
+}
+
+/* ========================================================= */
+/* Diapositiva 4 • Familias Tipográficas */
+/* ========================================================= */
+.titulo-ejemplo {
+    font-family: "Times New Roman", serif;
+    color: gray;
+}
+
+/* ========================================================= */
+/* Diapositiva 7 • Tamaño en píxeles */
+/* ========================================================= */
+.px-16 { font-size: 16px; }
+.px-24 { font-size: 24px; }
+
+/* ========================================================= */
+/* Diapositiva 8 • Tamaño en porcentaje */
+/* ========================================================= */
+.porcentaje-base { font-size: 16px; }
+.porcentaje-120 { font-size: 120%; }
+
+/* ========================================================= */
+/* Diapositiva 9 • Tamaño en em */
+/* ========================================================= */
+.em-base { font-size: 16px; }
+.em-1 { font-size: 1em; }
+.em-2 { font-size: 2em; }
+
+/* ========================================================= */
+/* Diapositiva 10 • Tamaño en puntos */
+/* ========================================================= */
+.pt-12 { font-size: 12pt; }
+.pt-18 { font-size: 18pt; }
+
+/* ========================================================= */
+/* Diapositiva 11 • Peso y estilo */
+/* ========================================================= */
+.fw-normal { font-weight: normal; }
+.fw-bold { font-weight: bold; }
+.italic { font-style: italic; }
+
+/* ========================================================= */
+/* Diapositiva 12 • Transformación de texto */
+/* ========================================================= */
+.upper { text-transform: uppercase; }
+.lower { text-transform: lowercase; }
+.cap { text-transform: capitalize; }
+
+/* ========================================================= */
+/* Diapositiva 13 • Alineado */
+/* ========================================================= */
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+.justify { text-align: justify; }
+
+/* ========================================================= */
+/* Diapositiva 14 • Decorado */
+/* ========================================================= */
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.overline { text-decoration: overline; }
+
+/* ========================================================= */
+/* Diapositiva 15 • Identación, espaciado y alto de línea */
+/* ========================================================= */
+.indent { text-indent: 40px; }
+.letter-space { letter-spacing: 3px; }
+.word-space { word-spacing: 10px; }
+.line-height { line-height: 2; }
+
+/* ========================================================= */
+/* Diapositiva 16 • Alineado vertical */
+/* ========================================================= */
+.vertical-demo img { vertical-align: middle; }
+
+/* ========================================================= */
+/* Diapositiva 17 • Sombra */
+/* ========================================================= */
+.shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* ========================================================= */
+/* Diapositiva 19•22 • Cascada */
+/* ========================================================= */
+.cascada-ejemplo {
+    color: blue; /* Regla débil */
+}
+/* Esta regla gana por orden de aparición */
+.cascada-ejemplo {
+    color: red;
+}
+
+/* ========================================================= */
+/* Diapositiva 23 • Herencia */
+/* ========================================================= */
+.herencia-base {
+    color: purple;
+    font-family: Georgia, serif;
+}
+.heredado {
+    /* hereda color y tipografía */
+}
+
+/* ========================================================= */
+/* Diapositiva 24 • Control de la herencia */
+/* ========================================================= */
+.inherit-demo { color: inherit; }
+.initial-demo { color: initial; }
+.unset-demo { color: unset; }
+
+/* ========================================================= */
+/* Diapositiva 28 • Selectores CSS */
+/* ========================================================= */
+.selector-ejemplo {
+    color: teal;
+}
+
+/* ========================================================= */
+/* Diapositiva 31 • Listas de selectores */
+/* ========================================================= */
+.lista-1,
+.lista-2 {
+    color: darkblue;
+    font-weight: bold;
+}
+
+/* ========================================================= */
+/* Diapositiva 34 • Tipos de selectores */
+/* ========================================================= */
+#ejemplo-id { color: crimson; }
+.ejemplo-clase { color: darkgreen; }
+h3 { color: purple; }
+
+/* ========================================================= */
+/* Diapositiva 35 • Selectores de atributo */
+/* ========================================================= */
+a[title] { color: orange; }
+input[type="email"] {
+    border: 2px solid steelblue;
+}
+
+/* ========================================================= */
+/* Diapositiva 36 • Pseudoclases y pseudoelementos */
+/* ========================================================= */
+.btn-hover:hover {
+    background-color: black;
+    color: white;
+}
+
+.pseudo-texto::first-line {
+    font-weight: bold;
+}
+
+.pseudo-texto::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+/* ========================================================= */
+/* Diapositiva 37 • Combinadores */
+/* ========================================================= */
+.articulo > p {
+    color: blue;
+}
+
+.articulo p {
+    font-style: italic;
+}
+
+.hermano-titulo + .hermano-parrafo {
+    color: green;
+}
+
+.hermano-titulo ~ .hermano-general {
+    color: brown;
+}
+
+/* ========================================================= */
+/* Diapositiva 38 • Tabla de referencia aplicada */
+/* ========================================================= */
+.tabla-selectores .item {
+    color: darkcyan;
+}
+
+#item-id {
+    color: darkred;
+}
+
+[data-info="true"] {
+    color: goldenrod;
+}
+
+/* ========================================================= */
+/* Diapositiva 39 • Ejemplo final */
+/* ========================================================= */
+.contenedor-final .titulo-final {
+    color: navy;
+}
+
+.contenedor-final .texto-final:hover {
+    color: tomato;
+}
+
+.contenedor-final a.link-final {
+    text-decoration: underline;
+}

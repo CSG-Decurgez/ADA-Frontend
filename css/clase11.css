@@ -1,0 +1,59 @@
+/* =============================== */
+/* Clase 11 — Estilos exclusivos   */
+/* =============================== */
+
+/* Títulos dentro de la guía */
+.card h3 {
+  margin-top: 40px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+/* Bloques de código */
+pre {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+pre code {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: "Fira Code", monospace;
+}
+
+/* Enlaces dentro de la guía */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Ejemplo final */
+.card .ejemplo-final {
+  padding: 15px;
+  background-color: #f7f7f7;
+  border-left: 4px solid #0066cc;
+  margin-bottom: 30px;
+}
+
+/* Ajustes de párrafos */
+.card p {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Footer */
+footer p {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #777;
+}

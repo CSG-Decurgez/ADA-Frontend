@@ -1,0 +1,54 @@
+/* ========================= */
+/* Así se comenta aquí       */
+/* ========================= */
+
+
+
+/* ========================= */
+/*          Clase 04         */
+/* ========================= */
+
+/* ========================= */
+/* Estilos generales         */
+/* ========================= */
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+/* ========================= */
+/* Selectores por tipo       */
+/* ========================= */
+
+p {
+  color: steelblue;
+}
+
+/* ========================= */
+/* Selector por clase        */
+/* ========================= */
+
+.destacado {
+  color: crimson;
+  font-weight: bold;
+}
+
+/* ========================= */
+/* Selector por ID           */
+/* ========================= */
+
+#importante {
+  color: seagreen;
+  text-decoration: underline;
+}
+
+/* ========================= */
+/* Selector descendiente     */
+/* ========================= */
+
+section p {
+  color: purple;
+}

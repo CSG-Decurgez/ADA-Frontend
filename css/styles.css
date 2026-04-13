@@ -1,0 +1,93 @@
+/* ========================= */
+/* Estilos generales         */
+/* ========================= */
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background: #f4f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================= */
+/* Header                    */
+/* ========================= */
+
+header {
+  background: #CD0055;
+  color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitulo {
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
+/* ========================= */
+/* Contenedor principal      */
+/* ========================= */
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ========================= */
+/* Tarjeta principal         */
+/* ========================= */
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: min(800px, 90%);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ========================= */
+/* Listado de clases         */
+/* ========================= */
+
+.clases {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clases > li {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.clases h3 {
+  margin: 0 0 0.5rem 0;
+  color: #CD0055;
+}
+
+/* ========================= */
+/* Links                     */
+/* ========================= */
+
+a {
+  color: #333;
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+a:hover {
+  background: #4b4bff;
+  color: white;
+}

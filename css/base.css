@@ -1,0 +1,120 @@
+
+
+/* ========================= */
+/* Tipografías               */
+/* ========================= */
+/* Las tipografías ahora se cargan desde el <head> de cada página */
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Russo+One&display=swap'); */
+/* Eliminamos el @import para evitar problemas en subcarpetas     */
+
+/* ========================= */
+/* Estilos generales         */
+/* ========================= */
+
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  background: #f4f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Imágenes responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========================= */
+/* Header compacto (clases)  */
+/* ========================= */
+
+header {
+  background: #CD0055;
+  color: white;
+  padding: 1.2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: 'Russo One', sans-serif;
+}
+
+header .subtitulo {
+  margin-top: 0.3rem;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+/* ========================= */
+/* Links                     */
+/* ========================= */
+
+a {
+  color: #333;
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+a:hover {
+  background: #CD0055;
+  color: white;
+}
+
+/* ========================= */
+/* Tarjetas genéricas        */
+/* ========================= */
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 1.5rem auto;
+  width: min(900px, 90%);
+}
+
+/* ========================= */
+/* Botón volver al índice    */
+/* ========================= */
+
+.volver {
+  display: inline-block;
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+.volver::before {
+  content: "← ";
+}
+
+/* ========================= */
+/* Navegación entre páginas  */
+/* ========================= */
+
+.navegacion {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.navegacion .volver {
+  font-weight: 700;
+  background: white;
+  border: 2px solid #CD0055;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: #CD0055;
+}
+
+.navegacion .volver:hover {
+  background: #CD0055;
+  color: white;
+}

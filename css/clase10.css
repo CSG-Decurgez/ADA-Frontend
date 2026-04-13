@@ -1,0 +1,74 @@
+/* ========================================================= */
+/* Estilos específicos de la Guía Práctica Clase 10          */
+/* Cada bloque está comentado según la diapositiva del PPT   */
+/* ========================================================= */
+
+h3 {
+  font-family: 'Russo One', sans-serif;
+  color: #CD0055;
+  margin-top: 2rem;
+}
+
+/* Código dentro de <pre><code> */
+pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Inputs básicos (diapositivas 8–12) */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="file"],
+textarea,
+select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  margin: 0.3rem 0 1rem 0;
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Botón submit (diapositiva 12) */
+input[type="submit"],
+button {
+  background: #CD0055;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background: #a80046;
+}
+
+/* Fieldset (diapositiva 32) */
+fieldset {
+  border: 2px solid #CD0055;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+legend {
+  font-weight: bold;
+  color: #CD0055;
+}

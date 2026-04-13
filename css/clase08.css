@@ -1,0 +1,178 @@
+/* ========================= */
+/* Estilos generales         */
+/* ========================= */
+
+section {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-family: 'Russo One', sans-serif;
+  color: #CD0055;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+/* ========================= */
+/* Demos de unidades         */
+/* ========================= */
+
+.demo-relativas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.demo-relativas .box {
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+}
+
+/* Colores coherentes con ADA */
+.porcentaje {
+  width: 50%;
+  background: #CD0055;
+}
+
+.vh {
+  height: 30vh;
+  background: #555;
+}
+
+.vw {
+  width: 40vw;
+  background: #777;
+}
+
+/* ========================= */
+/* Texto con em y rem        */
+/* ========================= */
+
+.demo-texto {
+  margin: 1.5rem 0;
+}
+
+.texto-rem {
+  font-size: 1.5rem;
+  background: #f7f7f7;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.contenedor-em {
+  font-size: 1.2em;
+  background: #eee;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+/* ========================= */
+/* Caja con calc()           */
+/* ========================= */
+
+.caja-calc {
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  background: #CD0055;
+  color: white;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+/* ========================= */
+/* Imágenes responsivas      */
+/* ========================= */
+
+.img-resp {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+/* ========================= */
+/* Galería responsiva        */
+/* ========================= */
+
+.gallery {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+}
+
+/* ========================= */
+/* Mini Landing Clase 08     */
+/* ========================= */
+
+/* HERO */
+.hero {
+  height: 70vh; /* un poco menos de aire */
+  background: url('../images/clase_08_hero.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 0 0 8px rgba(0,0,0,0.4); /* mejora legibilidad */
+}
+
+/* INTRO */
+.intro {
+  padding: 2rem 1.5rem; /* aire lateral y vertical */
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 2rem 1.5rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #CD0055;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* ========================= */
+/* Estilo para bloques de código */
+/* ========================= */
+
+.codigo {
+    padding: 2rem 1.5rem;
+}
+pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid #ddd;
+  margin: 2rem 0;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+  display: block;
+  white-space: pre;
+}

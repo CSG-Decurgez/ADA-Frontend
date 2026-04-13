@@ -1,0 +1,33 @@
+/* ========================= */
+/* Ejercicios Clase 07       */
+/* ========================= */
+
+.demo-container {
+  background: #eee;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+}
+
+.demo-box {
+  background: #CD0055;
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Variantes según la clase */
+.demo-wrap {
+  flex-wrap: wrap;
+}
+
+.demo-align {
+  align-items: center;
+}
+
+.demo-order .demo-box:nth-child(2) {
+  order: -1;
+}
