@@ -1,0 +1,110 @@
+/* -------------------------
+   Correcciones puntuales
+   ------------------------- */
+
+/* Aseguramos que la card esté centrada */
+.product-card {
+  max-width: 320px;
+  margin: 24px auto;       /* centrado horizontal */
+  background: #fff;
+  border-radius: 8px;
+  overflow: visible;       /* permite que badges sobresalgan si hace falta */
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  box-sizing: border-box;  /* evita sorpresas con padding */
+}
+
+/* Figura: quitar márgenes por defecto y crear contexto */
+.product-media,
+.product-media img {
+  display: block;
+  margin: 0;               /* elimina desplazamientos por margin de <figure> o <img> */
+}
+
+/* CONTEXTO para posicionar badges y botón */
+.product-media {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;    /* caja cuadrada; cambiar a 75% si la foto es rectangular */
+  overflow: hidden;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: #f8f8f8;
+  box-sizing: border-box;
+}
+
+/* Imagen: ocupar todo el contenedor y centrar su contenido */
+.product-image {
+  position: absolute;
+  inset: 0;                /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* recorta sin deformar */
+  object-position: center; /* centra la foto dentro del recorte */
+  display: block;
+  left: 0;                 /* fuerza 0 para evitar desplazamientos */
+}
+
+/* Estilo base para badges (oblea) */
+.badge {
+  position: absolute;
+  display: inline-block;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Envío gratis: arriba izquierda */
+.badge-shipping {
+  top: 10px;
+  left: 10px;
+  background: #1e90ff;
+  z-index: 10;
+}
+
+/* Descuento: debajo de envío gratis (misma alineación izquierda) */
+.badge-discount {
+  /* colocamos debajo: top = shipping.top + shipping.height + gap */
+  top: 42px;               /* ajustar si cambian paddings/fuentes; 42px funciona con padding 6px */
+  left: 10px;              /* misma alineación que shipping */
+  background: #2ecc71;
+  z-index: 9;
+}
+
+/* Botón favorito (corazón) — siempre por encima y dentro del área */
+.fav-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;              /* dentro del borde de la imagen */
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.95);
+  color: #e74c3c;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;             /* por encima de badges */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+/* Si el corazón "sale" del área en móviles, reducimos tamaño con media query */
+@media (max-width: 420px) {
+  .fav-btn { width: 32px; height: 32px; top: 6px; right: 6px; font-size: 14px; }
+  .badge-shipping, .badge-discount { font-size: 11px; padding: 5px 7px; top: 36px; }
+}
+
+/* Pie de la tarjeta */
+.product-info { padding: 12px 14px 18px; }
+.product-name { margin: 0 0 6px; font-size: 16px; font-weight: 700; }
+.product-desc { margin: 0 0 10px; font-size: 13px; color: #666; }
+.product-price { margin: 0; font-size: 18px; font-weight: 800; }

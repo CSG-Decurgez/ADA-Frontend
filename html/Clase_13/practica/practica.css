@@ -1,0 +1,56 @@
+/* -------------------------
+   Plantilla: clases a completar
+   ------------------------- */
+
+/* Card principal */
+.product-card {
+  /* borde, fondo, padding, max-width, centrado */
+}
+
+/* Preparando zona de imagen */
+.product-media,
+.product-media img {}
+
+
+/* Media / imagen */
+.product-media {
+  /* posición relativa para que los badges se posicionen respecto a este contenedor */
+}
+
+.product-image {
+  /* tamaño responsivo de la imagen */
+}
+
+/* Badges (oblea envío gratis y descuento) */
+.badge {
+  /* estilo base de las obleas: padding, color, border-radius */
+}
+
+.badge-shipping {
+  /* posición: top-left; color y fondo */
+}
+
+.badge-discount {
+  /* posición: top-right; color y fondo; z-index mayor que shipping si se superponen */
+}
+
+/* Botón favorito (corazón) */
+.fav-btn {
+  /* posición: top-right (por encima de la imagen), tamaño, fondo transparente */
+}
+
+/* Pie de la tarjeta */
+.product-info {
+  /* padding, tipografía */
+}
+
+.product-name { /* estilo del nombre */ }
+.product-desc { /* estilo de la descripción */ }
+.product-price { /* estilo del precio (resaltar) */ }
+
+/* Clearfix para contener floats si se usan */
+.product-card::after {
+  content: "";
+  display: block;
+  clear: both;
+}

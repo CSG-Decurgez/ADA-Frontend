@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase 13 • Sistema de posicionamiento en CSS</title>
+
+  <!-- Tipografías Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/clase13.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <h1>Clase 13 • Sistema de posicionamiento en CSS</h1>
+    <h2>Guía práctica basada en las diapositivas</h2>
+  </header>
+  
+  <!-- Navegación -->
+  <section class="navegacion">
+    <a class="volver" href="../../index.html">Volver al índice</a>
+    <a class="volver" href="practica/practica.html" target="_blank">Práctica</a>
+  </section>
+
+  <main class="contenedor">
+
+    <section class="card">
+
+      <section>
+        <h3>¿Qué es el posicionamiento en CSS?</h3>
+        <p>
+          El posicionamiento en CSS es el mecanismo que nos permite controlar dónde aparece un elemento en la página
+          y cómo se relaciona con los demás elementos. Por defecto los elementos siguen un flujo normal.
+        </p>
+        <div class="demo-row">
+          <div class="demo-box">Bloque A</div>
+          <div class="demo-box">Bloque B</div>
+        </div>
+        <pre><code>&lt;div class="demo-box"&gt;Bloque A&lt;/div&gt;
+&lt;div class="demo-box"&gt;Bloque B&lt;/div&gt;</code></pre>
+      </section>
+
+      <section>
+        <h3>¿Para qué sirve el posicionamiento?</h3>
+        <p>Mover elementos, superponer, fijar en pantalla y controlar orden visual con <code>z-index</code>.</p>
+        <div class="demo-z">
+          <div class="demo-card base">Base</div>
+          <div class="demo-card top">Top (z-index mayor)</div>
+        </div>
+        <pre><code>.demo-card.top { position: relative; z-index: 10; }</code></pre>
+      </section>
+
+      <section>
+        <h3>Posicionamiento normal static</h3>
+        <p>Comportamiento por defecto: elementos en flujo normal.</p>
+        <div class="demo-static">
+          <div class="demo-static-item">Item 1</div>
+          <div class="demo-static-item">Item 2</div>
+        </div>
+        <pre><code>.demo-static-item { display: block; }</code></pre>
+      </section>
+
+      <section>
+        <h3>Posicionamiento relativo relative</h3>
+        <p>Ocupa su lugar en el flujo pero puede moverse visualmente.</p>
+        <div class="demo-relative">
+          <div class="demo-rel">Caja relativa</div>
+        </div>
+        <pre><code>.demo-rel { position: relative; top: 10px; left: 20px; }</code></pre>
+      </section>
+
+      <section>
+        <h3>Posicionamiento absoluto absolute</h3>
+        <p>Se posiciona respecto del ancestro posicionado y sale del flujo.</p>
+        <div class="demo-abs-wrapper">
+          <div class="demo-abs">Caja absoluta</div>
+          <div class="demo-abs-helper">Contenedor</div>
+        </div>
+        <pre><code>.demo-abs-wrapper { position: relative; }
+.demo-abs { position: absolute; top: 10px; right: 10px; }</code></pre>
+      </section>
+
+      <section>
+        <h3>Posicionamiento fixed</h3>
+        <p>Se posiciona respecto del viewport y permanece al hacer scroll.</p>
+        <p><cite>(Busca el botón amarillo fijo en pantalla)</cite></p>
+        <button class="demo-fixed">Botón fijo</button>
+        <pre><code>.demo-fixed { position: fixed; bottom: 20px; right: 20px; }</code></pre>
+      </section>
+
+      <section>
+        <h3>Sistema de coordenadas</h3>
+        <p>Propiedades <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> y <code>z-index</code>.</p>
+        <div class="demo-coord-wrapper">
+          <div class="demo-coord">Coordenadas</div>
+        </div>
+        <pre><code>.demo-coord { position: absolute; top: 30px; left: 40px; }</code></pre>
+      </section>
+
+      <section>
+        <h3>Elementos flotantes float y clear</h3>
+        <p>Float permite columnas; clear recupera el flujo.</p>
+        <div class="demo-float">
+          <div class="demo-float-col">Columna 1</div>
+          <div class="demo-float-col">Columna 2</div>
+          <div class="clear"></div>
+        </div>
+        <pre><code>.demo-float-col { float: left; width: 50%; }</code></pre>
+      </section>
+
+      <section>
+        <h3>Concepto de grilla</h3>
+        <p>Dividir en columnas (ej. 12) para componer layouts.</p>
+        <div class="demo-grid">
+          <div class="col">A</div>
+          <div class="col">B</div>
+          <div class="col">C</div>
+          <div class="clear"></div>
+        </div>
+        <pre><code>.col { float: left; width: 33.33%; }</code></pre>
+      </section>
+
+      <section>
+        <h3>Ejemplos visuales y lecturas</h3>
+        <p>
+          <a href="https://ada7matm.github.io/pages/position.html" target="_blank">Ver ejemplos de posicionamiento</a>
+        </p>
+        <p>
+          Lecturas recomendadas: Posición – MDN; Entendiendo z-index – MDN.
+        </p>
+      </section>
+
+    </section> <!-- cierre de card -->
+
+  </main>
+
+  <footer>
+    <p>ADA • Frontend · Clase 13 • Guía Práctica</p>
+  </footer>
+
+</body>
+</html>
