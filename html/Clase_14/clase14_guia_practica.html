@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Clase 14 • Transiciones y transformaciones</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+
+  <!-- CSS general del sitio -->
+  <link rel="stylesheet" href="../../css/base.css">
+
+  <!-- CSS específico de esta clase -->
+  <link rel="stylesheet" href="../../css/porclase/clase14.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>Clase 14 • Transiciones y transformaciones</h1>
+    <h2>Guía práctica basada en las diapositivas</h2>
+  </header>
+
+  <main class="contenedor">
+
+    <article class="card">
+
+      <!-- INTRODUCCIÓN -->
+      <section>
+        <h3>Introducción</h3>
+        <p>
+          Las transiciones y transformaciones en CSS permiten animar y cambiar el estado de los elementos
+          de manera suave y atractiva. Aquí veremos ejemplos prácticos de transiciones, timing functions,
+          transformaciones 2D y 3D.
+        </p>
+      </section>
+
+      <!-- TRANSICIONES: ejemplo básico -->
+      <section>
+        <h3>Transición básica (background + scale)</h3>
+
+        <!-- Demo: caja que cambia color y escala al hover -->
+        <div class="demo demo-transition-basic">
+          <div class="box box-transition">Hover me</div>
+        </div>
+
+        <!-- Código visible para las alumnas -->
+        <pre><code>&lt;div class="box box-transition"&gt;Hover me&lt;/div&gt;
+
+/* CSS */
+.box-transition {
+  transition-property: background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+.box-transition:hover {
+  background-color: #ff6b6b;
+  transform: scale(1.06);
+}
+</code></pre>
+      </section>
+
+      <!-- PROPIEDADES DE TRANSICIÓN -->
+      <section>
+        <h3>Propiedades de transición (property, duration, timing, delay)</h3>
+
+        <div class="demo demo-transition-props">
+          <button class="btn btn-transition">Botón (transition shorthand)</button>
+        </div>
+
+        <pre><code>/* shorthand */
+.btn-transition {
+  transition: background-color 400ms ease-in-out 100ms;
+}
+.btn-transition:hover { background-color: #2ecc71; }
+</code></pre>
+      </section>
+
+      <!-- CURVAS DE BEZIER -->
+      <section>
+        <h3>Timing functions y cubic-bezier</h3>
+
+        <p>Compará distintas curvas: <code>ease</code>, <code>linear</code>, <code>ease-in-out</code>, y una <code>cubic-bezier</code> personalizada.</p>
+
+        <div class="demo demo-bezier">
+          <div class="bezier ease">ease</div>
+          <div class="bezier linear">linear</div>
+          <div class="bezier inout">ease-in-out</div>
+          <div class="bezier custom">cubic-bezier<br>(.2,.9,.3,1.2)</div>
+        </div>
+
+        <pre><code>.bezier.custom { transition-timing-function: cubic-bezier(.2,.9,.3,1.2); }</code></pre>
+      </section>
+
+      <!-- TRANSFORMACIONES 2D -->
+      <section>
+        <h3>Transformaciones 2D (translate, rotate, scale, skew)</h3>
+
+        <div class="demo demo-transform-2d">
+          <div class="card-demo t-translate">translate</div>
+          <div class="card-demo t-rotate">rotate</div>
+          <div class="card-demo t-scale">scale</div>
+          <div class="card-demo t-skew">skew</div>
+        </div>
+
+        <pre><code>.t-rotate:hover { transform: rotate(12deg); }
+.t-scale:hover  { transform: scale(1.12); }</code></pre>
+      </section>
+
+      <!-- TRANSFORMACIONES COMBINADAS -->
+      <section>
+        <h3>Transformaciones combinadas</h3>
+
+        <div class="demo demo-transform-combo">
+          <div class="combo">Hover</div>
+        </div>
+
+        <pre><code>.combo { transition: transform 350ms ease; }
+.combo:hover { transform: translateY(-8px) rotate(-4deg) scale(1.03); }</code></pre>
+      </section>
+
+      <!-- TRANSFORMACIONES 3D -->
+      <section>
+        <h3>Transformaciones 3D (rotateX / rotateY / translateZ)</h3>
+
+        <div class="demo demo-3d">
+          <div class="card-3d">3D</div>
+        </div>
+
+        <pre><code>.card-3d { transform-style: preserve-3d; perspective: 800px; }
+.card-3d:hover { transform: rotateY(18deg) translateZ(10px); }</code></pre>
+      </section>
+
+      <!-- TRANSFORM-ORIGIN -->
+      <section>
+        <h3>Transform origin</h3>
+
+        <div class="demo demo-origin">
+          <div class="origin origin-left">origin left</div>
+          <div class="origin origin-center">origin center</div>
+          <div class="origin origin-right">origin right</div>
+        </div>
+
+        <pre><code>.origin-left:hover { transform-origin: left center; transform: rotate(-18deg); }</code></pre>
+      </section>
+
+      <!-- EJEMPLO INTEGRADOR -->
+      <section>
+        <h3>Ejemplo integrador: tarjeta con hover (transition + transform)</h3>
+
+        <div class="demo demo-card-hover">
+          <article class="product-card demo-card-hover">
+            <img src="../../images/kitten.jpg" alt="Producto ejemplo" class="demo-img">
+            <div class="demo-card-body">
+              <h4>Producto Demo</h4>
+              <p>$49</p>
+            </div>
+          </article>
+        </div>
+
+        <pre><code>.demo-card-hover { transition: transform 300ms ease, box-shadow 300ms ease; }
+.demo-card-hover:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,.12); }</code></pre>
+      </section>
+
+      <!-- LECTURAS Y EJERCICIOS -->
+      <section>
+        <h3>Lecturas y ejercicios</h3>
+        <p><a href="https://ada7matm.github.io/pages/transition.html" target="_blank">Más ejemplos sobre este tema</a></p>
+        <p><a href="https://github.com/Ada-IT/ejercicios-frontend/blob/master/modulo-2/ejercicios/27-transiciones-transformaciones.md" target="_blank">Ejercicios de transiciones y transformaciones</a></p>
+      </section>
+
+    </article>
+
+  </main>
+
+  <footer>
+    <p>ADA • Frontend · Clase 14 • Guía Práctica</p>
+  </footer>
+
+</body>
+</html>
