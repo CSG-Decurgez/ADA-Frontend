@@ -1,1 +1,89 @@
+/* clase14.css - estilos mínimos para los demos de la guía
+   No toca reglas globales de base.css; solo lo específico de esta guía */
 
+/* Card general de la guía */
+.card { padding: 18px; }
+
+/* Demo containers */
+.demo { margin: 12px 0 18px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+/* ---------- TRANSICIÓN BÁSICA ---------- */
+.box {
+  width: 160px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4a90e2;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* transición aplicada a background y transform */
+.box-transition {
+  transition-property: background-color, transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+.box-transition:hover {
+  background-color: #ff6b6b;
+  transform: scale(1.06);
+}
+
+/* ---------- BOTÓN (shorthand) ---------- */
+.btn {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-transition {
+  transition: background-color 400ms ease-in-out 100ms;
+}
+.btn-transition:hover { background-color: #2ecc71; }
+
+/* ---------- BEZIER (comparación) ---------- */
+.bezier { width: 120px; height: 48px; background:#eee; display:flex; align-items:center; justify-content:center; border-radius:6px; transition: transform 600ms; cursor:pointer; }
+.bezier:hover { transform: translateY(-8px); }
+.bezier.ease { transition-timing-function: ease; }
+.bezier.linear { transition-timing-function: linear; }
+.bezier.inout { transition-timing-function: ease-in-out; }
+.bezier.custom { transition-timing-function: cubic-bezier(.2,.9,.3,1.2); }
+
+/* ---------- TRANSFORMACIONES 2D ---------- */
+.card-demo { width: 120px; height: 80px; background:#fafafa; border:1px solid #ddd; display:flex; align-items:center; justify-content:center; border-radius:6px; transition: transform 300ms ease; cursor:pointer; }
+.t-translate:hover { transform: translateX(12px); }
+.t-rotate:hover    { transform: rotate(12deg); }
+.t-scale:hover     { transform: scale(1.12); }
+.t-skew:hover      { transform: skewX(8deg); }
+
+/* ---------- TRANSFORMACIONES COMBINADAS ---------- */
+.combo { width: 160px; height: 80px; background:#fff; border:1px solid #ddd; display:flex; align-items:center; justify-content:center; border-radius:8px; transition: transform 350ms ease; cursor:pointer; }
+.combo:hover { transform: translateY(-8px) rotate(-4deg) scale(1.03); }
+
+/* ---------- 3D ---------- */
+.demo-3d { perspective: 900px; }
+.card-3d { width: 160px; height: 100px; background:#fff; border:1px solid #ddd; display:flex; align-items:center; justify-content:center; border-radius:8px; transition: transform 450ms ease; transform-style: preserve-3d; }
+.card-3d:hover { transform: rotateY(18deg) translateZ(8px); }
+
+/* ---------- TRANSFORM-ORIGIN ---------- */
+.origin { width: 120px; height: 60px; background:#f7f7f7; border:1px solid #ddd; display:flex; align-items:center; justify-content:center; border-radius:6px; transition: transform 300ms ease; cursor:pointer; }
+.origin-left:hover   { transform-origin: left center; transform: rotate(-18deg); }
+.origin-center:hover { transform-origin: center center; transform: rotate(-18deg); }
+.origin-right:hover  { transform-origin: right center; transform: rotate(-18deg); }
+
+/* ---------- EJEMPLO INTEGRADOR: TARJETA ---------- */
+.demo-card-hover { width: 220px; border-radius: 10px; overflow: hidden; background:#fff; border:1px solid #e6e6e6; transition: transform 300ms ease, box-shadow 300ms ease; cursor:pointer; }
+.demo-card-hover:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+.demo-card-hover .demo-img { width:100%; height:140px; object-fit:cover; display:block; }
+
+/* Ajustes tipográficos y pre */
+.card pre { background:#f6f8fa; padding:10px; border-radius:4px; overflow:auto; }
+
+/* Responsive pequeño */
+@media (max-width:420px) {
+  .demo { gap:8px; }
+  .box, .combo, .card-demo { width: 140px; }
+}
