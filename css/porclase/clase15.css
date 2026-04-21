@@ -1,0 +1,37 @@
+/* Contenedor general de demos */
+.demo {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0 18px;
+  flex-wrap: wrap;
+}
+
+/* Bloques de ejemplo */
+.bad, .good {
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+/* Estilos visuales */
+.bad {
+  background: #ffe5e5;
+  border: 1px solid #ffb3b3;
+  color: #b30000;
+}
+
+.good {
+  background: #e6ffe6;
+  border: 1px solid #b3ffb3;
+  color: #006600;
+}
+
+/* Código */
+pre {
+  background: #f6f8fa;
+  padding: 12px;
+  border-radius: 6px;
+  overflow: auto;
+  margin-bottom: 24px;
+}
