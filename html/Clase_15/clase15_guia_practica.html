@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Clase 15 • Uso de Clases en CSS</title>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Russo+One&display=swap" rel="stylesheet">
+
+
+  <!-- CSS general del sitio -->
+  <link rel="stylesheet" href="../../css/base.css">
+
+  <!-- CSS específico de esta guía -->
+  <link rel="stylesheet" href="../../css/porclase/clase15.css">
+</head>
+
+<body>
+
+<header class="page-header">
+  <h1>Clase 15 • Uso de Clases en CSS</h1>
+  <h2>Guía práctica basada en las diapositivas</h2>
+</header>
+
+<!-- Navegación -->
+  <section class="navegacion">
+    <a class="volver" href="../../index.html">Volver al índice</a>
+  </section>
+
+<main class="contenedor">
+
+  <article class="card">
+
+    <!-- INTRODUCCIÓN -->
+    <section>
+      <h3>Introducción</h3>
+      <p>
+        En esta guía veremos ejemplos prácticos de buenas y malas prácticas al nombrar y estructurar clases en CSS.
+        Cada bloque incluye un ejemplo ❌ incorrecto y uno ✔️ correcto.
+      </p>
+    </section>
+
+    <!-- NOMBRES DESCRIPTIVOS -->
+    <section>
+      <h3>Usar nombres descriptivos</h3>
+
+      <div class="demo">
+        <div class="bad">❌ .c1</div>
+        <div class="good">✔️ .boton-primario</div>
+      </div>
+
+<pre><code>/* ❌ Evitar */
+.c1 { background: blue; }
+
+/* ✔️ Correcto */
+.boton-primario { background: blue; }
+</code></pre>
+    </section>
+
+    <!-- EVITAR ABREVIACIONES -->
+    <section>
+      <h3>Evitar abreviaciones</h3>
+
+      <div class="demo">
+        <div class="bad">❌ .cnt</div>
+        <div class="good">✔️ .contenedor</div>
+      </div>
+
+<pre><code>/* ❌ Evitar */
+.cnt { padding: 20px; }
+
+/* ✔️ Correcto */
+.contenedor { padding: 20px; }
+</code></pre>
+    </section>
+
+    <!-- EVITAR NOMBRES LARGOS -->
+    <section>
+      <h3>Evitar nombres demasiado largos</h3>
+
+      <div class="demo">
+        <div class="bad">❌ .boton-azul-que-se-usa-en-el-header-principal</div>
+        <div class="good">✔️ .btn-header</div>
+      </div>
+
+<pre><code>/* ❌ Evitar */
+.boton-azul-que-se-usa-en-el-header-principal { ... }
+
+/* ✔️ Correcto */
+.btn-header { ... }
+</code></pre>
+    </section>
+
+    <!-- KEBAB CASE -->
+    <section>
+      <h3>Usar kebab-case</h3>
+
+      <div class="demo">
+        <div class="bad">❌ .botonPrimario</div>
+        <div class="good">✔️ .boton-primario</div>
+      </div>
+
+<pre><code>/* ❌ Evitar */
+.botonPrimario { ... }
+
+/* ✔️ Correcto */
+.boton-primario { ... }
+</code></pre>
+    </section>
+
+    <!-- EVITAR SELECTORES DE ETIQUETA -->
+    <section>
+      <h3>Evitar selectores de etiqueta</h3>
+
+      <div class="demo">
+        <div class="bad">❌ h1 { color: red; }</div>
+        <div class="good">✔️ .titulo-principal { color: red; }</div>
+      </div>
+
+<pre><code>/* ❌ Evitar */
+h1 { color: red; }
+
+/* ✔️ Correcto */
+.titulo-principal { color: red; }
+</code></pre>
+    </section>
+
+    <!-- EVITAR IDS -->
+    <section>
+      <h3>Evitar IDs para estilos</h3>
+
+      <div class="demo">
+        <div class="bad">❌ #header { background: black; }</div>
+        <div class="good">✔️ .header { background: black; }</div>
+      </div>
+
+<pre><code>/* ❌ Evitar */
+#header { background: black; }
+
+/* ✔️ Correcto */
+.header { background: black; }
+</code></pre>
+    </section>
+
+    <!-- EVITAR SELECTORES COMPLEJOS -->
+    <section>
+      <h3>Evitar selectores complejos</h3>
+
+      <div class="demo">
+        <div class="bad">❌ .card ul li a span { color: blue; }</div>
+        <div class="good">✔️ .card-link { color: blue; }</div>
+      </div>
+
+<pre><code>/* ❌ Evitar */
+.card ul li a span { color: blue; }
+
+/* ✔️ Correcto */
+.card-link { color: blue; }
+</code></pre>
+    </section>
+
+    <!-- PREFIJOS -->
+    <section>
+      <h3>Usar prefijos para estados (is-, has-)</h3>
+
+      <div class="demo">
+        <div class="good">✔️ .is-activo</div>
+      </div>
+
+<pre><code>.is-activo { opacity: 1; }
+</code></pre>
+    </section>
+
+    <!-- PADRE-HIJO -->
+    <section>
+      <h3>Clases padre-hijo</h3>
+
+      <div class="demo">
+        <div class="good">✔️ .card-title</div>
+        <div class="good">✔️ .card-body</div>
+      </div>
+
+<pre><code>.card-title { font-size: 20px; }
+.card-body { padding: 12px; }
+</code></pre>
+    </section>
+
+    <!-- CONSISTENCIA -->
+    <section>
+      <h3>Ser consistentes</h3>
+
+      <p>Si usás kebab-case, usalo en todo el proyecto.</p>
+
+<pre><code>/* ✔️ Correcto */
+.btn-primario { ... }
+.card-body { ... }
+.titulo-principal { ... }
+</code></pre>
+    </section>
+
+    <!-- REUTILIZACIÓN -->
+    <section>
+      <h3>Reutilizar estilos</h3>
+
+      <div class="demo">
+        <div class="good">✔️ .text-center</div>
+      </div>
+
+<pre><code>.text-center { text-align: center; }
+</code></pre>
+    </section>
+
+    <!-- COMENTARIOS -->
+    <section>
+      <h3>Usar comentarios y agrupar clases</h3>
+
+<pre><code>/* --- Botones --- */
+.btn { padding: 10px; }
+.btn-primario { background: blue; }
+
+/* --- Tarjetas --- */
+.card { border: 1px solid #ddd; }
+.card-body { padding: 12px; }
+</code></pre>
+    </section>
+
+    <!-- LECTURAS y RECORRIDO -->
+    <section>
+      <h3>Lecturas recomendadas</h3>
+      <ul>
+        <li><a href="https://kinsta.com/es/blog/buenas-practicas-css/" target="_blank">Buenas prácticas CSS</a></li>
+        <li><a href="https://css-tricks.com/semantic-class-names/" target="_blank">Semantic class names</a></li>
+      </ul>
+      <ul>
+        <li><a class="btn" href="recorrido.html">Ver recorrido del curso</a></li>
+      </ul>
+    </section>
+
+  </article>
+
+
+
+</main>
+
+<footer>
+  <p>ADA • Frontend · Clase 15 • Guía Práctica</p>
+</footer>
+
+</body>
+</html>
